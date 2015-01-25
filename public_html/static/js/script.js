@@ -19,7 +19,7 @@ navigator.sayswho = (function() {
 
 var browser = navigator.sayswho;
 var browserName = browser.split(' ')[0];
-var browserLogo = "img/" + browserName + ".png";
+var browserLogo = "static/images/" + browserName + ".png";
 
 $(document).ready(function() {
 	$('.browser-logo').css({
