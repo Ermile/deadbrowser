@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200);
+* { margin: 0; padding: 0; }
+html { height: 100% }
+body {
+	font-family: 'Titillium Web', sans-serif;
+	color: #333;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #F0F0F0));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #F0F0F0 100%);
+}
+.wrapper {
+	width: 300px;
+	height: 300px;
+	margin: 10% auto 0;
+}
+.browser-logo {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto 10px;
+}
+.browser-version {
+	text-align: center;
+}
+.divider {
+	margin: 15px; auto;
+	border-bottom: 1px solid #D5D5D5;
+}
+.title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.links {
+	text-align: center;
+}
+.links a {
+	text-decoration: none;
+}
+.browser {
+	display: inline-block;
+	width: 33.33%;
+	float: left;
+}
+.logo {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto;
+}
+.logo.firefox {
+	background: url('../img/Firefox.png') no-repeat;
+}
+.logo.opera {
+	background: url('../img/Opera.png') no-repeat;
+}
+.logo.chrome {
+	background: url('../img/Chrome.png') no-repeat;
+}
+.text {
+	color: #333;
+}
