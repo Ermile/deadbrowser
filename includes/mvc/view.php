@@ -5,9 +5,10 @@ class view extends \lib\view
 {
 	function _construct()
 	{
+		$this->include->css_main            = false;
 		// define default value for global
 
-		$this->data->site['title']   = T_("Ermile");
+		$this->data->site['title']   = T_("Browser Detection");
 		$this->data->site['desc']    = T_("Ermile is new");
 		$this->data->site['slogan']  = T_("Ermile is our company");
 

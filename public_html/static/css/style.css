@@ -60,13 +60,13 @@ body {
 	margin: 0 auto;
 }
 .logo.firefox {
-	background: url('../img/Firefox.png') no-repeat;
+	background: url('../images/Firefox.png') no-repeat;
 }
 .logo.opera {
-	background: url('../img/Opera.png') no-repeat;
+	background: url('../images/Opera.png') no-repeat;
 }
 .logo.chrome {
-	background: url('../img/Chrome.png') no-repeat;
+	background: url('../images/Chrome.png') no-repeat;
 }
 .text {
 	color: #333;
