@@ -17,7 +17,7 @@ navigator.sayswho = (function() {
 	return M.join(' ');
 })();
 
-var browser = navigator.sayswho;
+var browser     = navigator.sayswho;
 var browserName = browser.split(' ')[0];
 var browserLogo = "static/images/" + browserName + ".png";
 
@@ -27,4 +27,7 @@ $(document).ready(function() {
 	});
 
 	$('.browser-version span').text(browser);
+	$('.'+browserName.toLowerCase()).addClass('hide');
+
+	
 });

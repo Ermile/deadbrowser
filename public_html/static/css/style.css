@@ -51,7 +51,7 @@ body {
 }
 .browser {
 	display: inline-block;
-	width: 33.33%;
+	width: 50%;
 	float: left;
 }
 .logo {
@@ -59,15 +59,17 @@ body {
 	height: 64px;
 	margin: 0 auto;
 }
-.logo.firefox {
+.firefox .logo {
 	background: url('../images/Firefox.png') no-repeat;
 }
-.logo.opera {
+.opera .logo {
 	background: url('../images/Opera.png') no-repeat;
 }
-.logo.chrome {
+.chrome .logo {
 	background: url('../images/Chrome.png') no-repeat;
 }
 .text {
 	color: #333;
 }
+
+.hide{display:none}
