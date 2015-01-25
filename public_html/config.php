@@ -7,7 +7,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
  /** The name of the database */
- define("db_name", 'linkbor');
+ define("db_name", 'ermile');
 
  /** MySQL database username */
  define("db_user", 'ermile');
@@ -20,8 +20,7 @@
  * Default: False
  * 
  * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use DEBUG
- * in their development environments.
+ * It is strongly recommended that in developement condition use DEBUG in the development environments.
  */
 define('DEBUG', true);
 
@@ -33,17 +32,35 @@ define('DEBUG', true);
  * for see and work with site you can set with this address: YourSite.com?dev=yes
  * if your site is now ready for show to visitors, turn this option off
  */
-define('CommingSoon', true);
+define('CommingSoon', false);
 
 /**
  * Multilanguage
  * Default: false
  * 
  * If your site support multi language enable with this option.
- * For see and work with site you can set with this address: YourSite.com?dev=yes
- * If your site is now ready for show to visitors, turn this option off.
- * You can use T_() function to translate via dll and if not exist with php gettext. also you can use __() and _() functions.
+ * You can use T_() function to translate via dll and if not exist with php gettext.
+ * also you can use __() and _() functions.
  * With locale_emulation() you can get locale method is emulate(use php) or not(use gettext extention).
  */
 define('MultiLanguage', true);
+
+/**
+ * SaveAsCookie
+ * Default: true
+ *
+ * Convert all GET request set as Cookie for having clear address
+ * If this option is set to true then this event occur automatically for all pages
+ * you can disable this event for specefic page with set parameter in controller of that pages
+ */
+define('SaveAsCookie', true);
+
+/**
+ * LogVisitors
+ * Default: false
+ *
+ * if table exist add to it, else create a table and add a visitor details to it
+ */
+define('LogVisitors', false);
+
 ?>

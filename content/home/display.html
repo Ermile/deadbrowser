@@ -1,9 +1,38 @@
 {%extends display.mvc%}
 {%block content_def%}
-<form method="post">
-	{{forms.make(form.url)}}
-</form>
-<div class="xxx">
-	<div class="xx"></div>
-</div>
+  <section>
+    <div class="topic cover light1">
+      <div class="row Slogan">
+        <h2>{{site.slogan}}</h2>
+      </div>
+      <div class="body">
+        <div class="row">
+          <div class="span7"></div>
+          <div class="span5">
+            <h2>{%trans "Saloos"%}</h2>
+            <div class="desc">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="topic blue3">
+      <div class="body">
+        <div class="row">
+          <div class="span7"></div>
+          <div class="span5">
+            <h2>Do more with Station</h2>
+            <div class="desc">
+              The world’s fastest, easiest, and most intuitive space management
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {%endblock%}
