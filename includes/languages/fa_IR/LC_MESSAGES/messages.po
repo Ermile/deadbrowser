@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-25 21:45+0330\n"
-"PO-Revision-Date: 2015-01-25 21:46+0330\n"
+"POT-Creation-Date: 2015-01-25 22:12+0330\n"
+"PO-Revision-Date: 2015-01-25 22:12+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -30,7 +30,7 @@ msgid "Enter your password"
 msgstr "کلمه عبور خود را وارد کنید"
 
 #: ../../../.././includes/cls/form/account.php:23
-#: ../../../.././includes/languages/twig_translation.php:16
+#: ../../../.././includes/languages/twig_translation.php:17
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -139,7 +139,7 @@ msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: ../../../.././includes/languages/static_translation.php:33
-#: ../../../.././includes/languages/twig_translation.php:15
+#: ../../../.././includes/languages/twig_translation.php:16
 msgid "Logout"
 msgstr "خروج از سیستم"
 
@@ -152,7 +152,7 @@ msgid "Options"
 msgstr "تنظیمات"
 
 #: ../../../.././includes/languages/static_translation.php:38
-#: ../../../.././includes/languages/twig_translation.php:17
+#: ../../../.././includes/languages/twig_translation.php:18
 msgid "Go to"
 msgstr "برو به"
 
@@ -201,22 +201,26 @@ msgid "Add New"
 msgstr "افزودن"
 
 #: ../../../.././includes/languages/twig_translation.php:6
+msgid "You are using"
+msgstr "شما در حال استفاده از این مرورگر هستید"
+
+#: ../../../.././includes/languages/twig_translation.php:7
 msgid "Try the latest versions of these browsers!"
 msgstr "از آخرین نسخه یکی از مرورگرهای زیر استفاده کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:9
+#: ../../../.././includes/languages/twig_translation.php:10
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:12
+#: ../../../.././includes/languages/twig_translation.php:13
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:13
+#: ../../../.././includes/languages/twig_translation.php:14
 msgid "Admin"
 msgstr "مدیریت"
 
-#: ../../../.././includes/languages/twig_translation.php:14
+#: ../../../.././includes/languages/twig_translation.php:15
 msgid "Control Panel"
 msgstr "کنترل پنل"
 

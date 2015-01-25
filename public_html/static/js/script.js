@@ -26,5 +26,5 @@ $(document).ready(function() {
 		'background': 'url(' + browserLogo + ') no-repeat'
 	});
 
-	$('.browser-version').text('You are using ' + browser);
+	$('.browser-version span').text(browser);
 });
