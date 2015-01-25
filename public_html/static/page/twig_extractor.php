@@ -1,0 +1,1 @@
+/home/javad/Desktop/deadbrowser/includes/languages/twig_extractor.php

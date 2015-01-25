@@ -8,11 +8,11 @@ class view extends \lib\view
 		$this->include->css_main            = false;
 		// define default value for global
 
-		$this->data->site['title']   = T_("Browser Detection");
-		$this->data->site['desc']    = T_("Ermile is new");
-		$this->data->site['slogan']  = T_("Ermile is our company");
+		$this->data->site['title']   = T_("Browser Dead");
+		$this->data->site['desc']    = T_("the place for show your browser is dead! please update it!");
+		$this->data->site['slogan']  = T_("use up-to-date browser");
 
-		$this->data->page['desc']    = T_("Ermile is Inteligent.");
+		$this->data->page['desc']    = T_("the place for show your browser is dead! please update it!");
 
 		// add language list for use in display
 		$this->global->langlist		= array(
