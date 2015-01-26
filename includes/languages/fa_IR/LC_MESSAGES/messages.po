@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-25 22:12+0330\n"
-"PO-Revision-Date: 2015-01-25 22:12+0330\n"
+"POT-Creation-Date: 2015-01-26 14:59+0330\n"
+"PO-Revision-Date: 2015-01-26 14:59+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -30,7 +30,7 @@ msgid "Enter your password"
 msgstr "کلمه عبور خود را وارد کنید"
 
 #: ../../../.././includes/cls/form/account.php:23
-#: ../../../.././includes/languages/twig_translation.php:17
+#: ../../../.././includes/languages/twig_translation.php:20
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -139,7 +139,7 @@ msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: ../../../.././includes/languages/static_translation.php:33
-#: ../../../.././includes/languages/twig_translation.php:16
+#: ../../../.././includes/languages/twig_translation.php:19
 msgid "Logout"
 msgstr "خروج از سیستم"
 
@@ -152,7 +152,7 @@ msgid "Options"
 msgstr "تنظیمات"
 
 #: ../../../.././includes/languages/static_translation.php:38
-#: ../../../.././includes/languages/twig_translation.php:18
+#: ../../../.././includes/languages/twig_translation.php:21
 msgid "Go to"
 msgstr "برو به"
 
@@ -201,26 +201,38 @@ msgid "Add New"
 msgstr "افزودن"
 
 #: ../../../.././includes/languages/twig_translation.php:6
-msgid "You are using"
-msgstr "شما در حال استفاده از این مرورگر هستید"
+msgid "You are using <span>Browser!</span>"
+msgstr "شما در حال استفاده از  <span>Browser!</span> هستید!"
 
 #: ../../../.././includes/languages/twig_translation.php:7
 msgid "Try the latest versions of these browsers!"
 msgstr "از آخرین نسخه یکی از مرورگرهای زیر استفاده کنید"
 
+#: ../../../.././includes/languages/twig_translation.php:8
+msgid "Firefox"
+msgstr "فایرفاکس"
+
+#: ../../../.././includes/languages/twig_translation.php:9
+msgid "Opera"
+msgstr "اپرا"
+
 #: ../../../.././includes/languages/twig_translation.php:10
+msgid "Chrome"
+msgstr "کروم"
+
+#: ../../../.././includes/languages/twig_translation.php:13
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:13
+#: ../../../.././includes/languages/twig_translation.php:16
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:14
+#: ../../../.././includes/languages/twig_translation.php:17
 msgid "Admin"
 msgstr "مدیریت"
 
-#: ../../../.././includes/languages/twig_translation.php:15
+#: ../../../.././includes/languages/twig_translation.php:18
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
@@ -236,6 +248,9 @@ msgstr "مکانی برای اعلام مرگ مرورگر شما. لطفا به
 #: ../../../.././includes/mvc/view.php:13
 msgid "use up-to-date browser"
 msgstr "از مرورگر بروز استفاده کنید"
+
+#~ msgid "You are using"
+#~ msgstr "شما در حال استفاده از این مرورگر هستید"
 
 #~ msgid "you are logined to system!"
 #~ msgstr "شما قبلا یک بار وارد سیستم شده اید!"

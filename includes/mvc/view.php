@@ -5,7 +5,7 @@ class view extends \lib\view
 {
 	function _construct()
 	{
-		$this->include->css_main            = false;
+		// $this->include->css_main            = false;
 		// define default value for global
 
 		$this->data->site['title']   = T_("Browser Dead");

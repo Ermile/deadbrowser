@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200);
 * { margin: 0; padding: 0; }
-html { height: 100% }
-body {
+html{height: 100%}
+body{
+	font-size: 1.2em;
 	font-family: 'Titillium Web', sans-serif;
 	color: #333;
 	/* IE10 Consumer Preview */ 

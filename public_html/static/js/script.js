@@ -19,6 +19,7 @@ navigator.sayswho = (function() {
 
 var browser     = navigator.sayswho;
 var browserName = browser.split(' ')[0];
+var browserVersion = browser.split(' ')[1];
 var browserLogo = "static/images/" + browserName + ".png";
 
 $(document).ready(function() {
@@ -26,8 +27,9 @@ $(document).ready(function() {
 		'background': 'url(' + browserLogo + ') no-repeat'
 	});
 
-	$('.browser-version span').text(browser);
+	$('.browser-version span').text( $('.'+browserName.toLowerCase()).text() + ' ' + browserVersion );
 	$('.'+browserName.toLowerCase()).addClass('hide');
+	
 
 	
 });

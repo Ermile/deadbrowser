@@ -3,8 +3,11 @@ function transtext()
 {
 
 	//------------------avad/supervisor/projects/deadbrowser/content/home/display.html
-	echo T_("You are using");                                                         // Line 7 Seperate
+	echo T_("You are using <span>Browser!</span>");                                   // Line 7 Seperate
 	echo T_("Try the latest versions of these browsers!");                            // Line 9 Seperate
+	echo T_("Firefox");                                                               // Line 14
+	echo T_("Opera");                                                                 // Line 20
+	echo T_("Chrome");                                                                // Line 26
 
 	//--------------avad/supervisor/projects/deadbrowser/includes/cls/macro/forms.html
 	echo T_("Please select one item");                                                // Line 49 Seperate
