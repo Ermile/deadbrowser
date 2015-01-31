@@ -23,7 +23,7 @@ var browserDetect = {
 				'Your operating system is ' + b.os.name + '</br>'
 			);
 		} else {
-			browserDetect.showInfo('Sorry! Your device is not a desktop!');
+			browserDetect.showInfo('Sorry! Come back later!');
 		}
 	},
 
