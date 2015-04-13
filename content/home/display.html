@@ -1,6 +1,38 @@
 {%extends display.mvc%}
+{%block header_def%}{%endblock%}
+{%block foot_js%}
+ <script src="{{url.static}}js/detect.min.js"></script>
+{%endblock%}
+
+{%block content_def%}
+
+  <div class="wrapper">
+    <div class="browser-logo"></div>
+    <div class="browser-version">{%trans%}You are using <span>Browser!</span>{%endtrans%}</div>
+    <div class="divider"></div>
+    <div class="title">{%trans%}Try the latest versions of this browsers!{%endtrans%}</div>
+    <div class="links">
+      <div class="browser firefox">
+        <a href="http://www.getfirefox.com/">
+          <div class="logo"></div>
+          <div class="text">{%trans "Firefox"%}</div>
+        </a>
+      </div>
+      <div class="browser opera">
+        <a href="http://www.opera.com/">
+          <div class="logo"></div>
+          <div class="text">{%trans "Opera"%}</div>
+        </a>
+      </div>
+      <div class="browser chrome">
+        <a href="http://www.google.com/chrome">
+          <div class="logo"></div>
+          <div class="text">{%trans "Chrome"%}</div>
+        </a>
+      </div>
+    </div>
+  </div>
 
 
-{%block body_def%}
   <div id="message-area"></div>
 {%endblock%}

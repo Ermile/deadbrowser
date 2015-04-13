@@ -5,20 +5,21 @@
  <meta charset="UTF-8"/>
  <base href="{{url.base}}"/>
  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui"/>
  <title>{{global.title}}</title>
  <meta name    ="description"    content="{{page.desc}}"/>
  <meta property="og:url"         content="{{url.root}}"/>
  <meta property="og:image"       content="{{url.static}}images/logo.png"/>
  <meta property='og:locale'      content='{{global.lang}}'/>
+ <!-- [if lte IE 8]><script>document.location = 'http://deadbrowser.com/?lang={{global.lang}}';</script><![endif] -->
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
+{%if include.fontawesome %}
+ <link rel="stylesheet"    href="{{url.myStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%if include.css_main%}
- <link rel="stylesheet"    href="{{url.MainStatic}}css/main.css"/>{{include.newline}}{%endif%}
+ <link rel="stylesheet"    href="{{url.myStatic}}css/main.css"/>{{include.newline}}{%endif%}
 {%if include.css     %}
  <link rel="stylesheet"    href="{{url.static}}css/style.css"/>{{include.newline}}{%endif%}
-{%if include.fontawesome %}
- <link rel="stylesheet"    href="{{url.MainStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%block head_css         %}{%endblock%}
 {%block head_js          %}{%endblock%}
 {%endblock%}
@@ -40,7 +41,6 @@
     <nav>
      <div id="header-nav">
       <a href="{{url.root}}">{%trans "Home Page"%}</a>
-      <a href="http://admin.{{url.raw}}/none">{%trans "Admin"%}</a>
       <a href="http://cp.{{url.raw}}">{%trans "Control Panel"%}</a>
 {%if global.login%}
       <a href="http://account.{{url.raw}}/logout">{%trans "Logout"%}</a>
@@ -62,42 +62,38 @@
  <p class='def-msg'>Let start using Saloos! start edit twig block for show your content. for replace this text use <b>block content</b>.</p>
 {%endblock%}
 {%block footer_def%}
- <footer>
-  <div id="footer">
-  <div class="light1 row-padding-medium">
-   <div class="container">
-   <div class="row">
-    <div class="span12">
-    <p>{%trans "Go to"%} <a href="{{url.root}}" title="{{site.desc}}" class="roller cursor-help"><span data-title="{{site.title}}">{{site.title}}</span></a>.</p>
-    <p>
-     <select id="langlist">
+<footer id="footer">
+  <div id="copyright">
+   <i class="fa fa-arrows" onclick="launchFullscreen(document.documentElement);"></i>
+   <div class='hint--right' data-hint='{{site.desc}}'>
+    <span>&copy; {{'now'|date('Y')}}</span>
+    <a href="{{url.root}}" tabindex='-1'>{{site.title}}</a>
+   </div>
+
+   <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
+    <select id="langlist" tabindex='-1'>
 {%for key, value in global.langlist%}{%if key == global.lang%}
-      <option class="{{key}}" value="{{key}}" selected="selected">{{value}}</option>
+     <option value="{{key}}" selected="selected">{{value}}</option>
 {%else%}
-      <option value="{{key}}">{{value}}</option>
+     <option value="{{key}}">{{value}}</option>
 {%endif%}{% endfor %}
-     </select>
-     {{include.gettext}}
-    </p>
-    </div>
-   </div>
+    </select>
    </div>
   </div>
-  </div>
- </footer>
+</footer>
 {%endblock%}
 {%block footer%}{%endblock%}
 {%endblock%}
 {%block debug%}
  {%if debug is iterable%}
-  <div id="formError" class="error_{{debug.status}} unselectable">
+  <div id="formError">
   {%for key, mydebug in debug.messages if mydebug is iterable %}
-   <ul class="{{key}}">
+   <ul class="{{key}} unselectable">
    {%for key, err in mydebug%}
    {%if err.title is defined%}
-   <li class="{{err.group}} {{err.redirect}}">{{err.title}}</li>
+   <li class="notify-{{err.group}} {{err.redirect}}">{{debug.title}} {{err.title}}</li>
    {%else%}
-   <li class="n_{{key}}">{{err}}</li>
+   <li class="notify-{{key}}">{{err}}</li>
    {%endif%}
    {%endfor%}
    </ul>
@@ -107,13 +103,16 @@
 {%endblock%}
 {%block foot_css%}{%endblock%}
 
-{%if include.js_main   %} <script src="{{url.MainStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.js_main   %} <script src="{{url.myStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.datatable %} <script src="{{url.myStatic}}js/datatable/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
+{%if include.editor    %} <script src="{{url.myStatic}}js/cp/medium-editor.min.js"></script>{{include.newline}}{%endif%}
+{%if include.telinput  %} <script src="{{url.myStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
+{%if include.chart     %} <script src="{{url.myStatic}}js/highcharts/highcharts.js"></script>{{include.newline}}{%endif%}
+{%if include.chartexp  %} <script src="{{url.myStatic}}js/highcharts/modules/exporting.js"></script>{{include.newline}}{%endif%}
 {%if include.js        %} <script src="{{url.static}}js/script.js"></script>{{include.newline}}{%endif%}
-{%if include.datatable %} <script src="{{url.MainStatic}}js/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.editor    %} <script src="{{url.MainStatic}}js/medium-editor.min.js"></script>{{include.newline}}{%endif%}
-{%if include.telinput  %} <script src="{{url.MainStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
-<script src="{{url.static}}js/detect.min.js"></script>
-{%block foot_js        %}{%endblock%}
 
+<div data-xhr='foot_js' class="foot_js">
+{%block foot_js        %}{%endblock%}
+</div>
 </body>
 </html>
