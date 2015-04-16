@@ -1,3 +1,9 @@
+var OSName = "Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName = "Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName = "MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName = "UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName ="Linux";
+
 navigator.sayswho = (function() {
 	var ua = navigator.userAgent, tem;
 	var M  = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
@@ -17,58 +23,28 @@ navigator.sayswho = (function() {
 	return M.join(' ');
 })();
 
-var browser     = navigator.sayswho;
-var browserName = browser.split(' ')[0];
-var browserVersion = browser.split(' ')[1];
-var browserLogo = "static/images/" + browserName + ".png";
+var b     	 = navigator.sayswho;
+var bName 	 = b.split(' ')[0];
+var bVersion = b.split(' ')[1];
+
+var br = ['IE', 'Firefox', 'Chrome', 'Opera', 'Safari'];
+
+function setIcon(browser) {
+	for (a in br) {
+		if (browser == br[a]) {
+			$('.icon').addClass(browser);
+		}
+	}
+}
 
 $(document).ready(function() {
-	$('.browser-logo').css({
-		'background': 'url(' + browserLogo + ') no-repeat'
-	});
+	if (typeof navigator.userAgent === 'undefined') {
+		$('.query').html('navigator.userAgent is not available in your browser.');
+	} else {
+		$('.query').html("You're using " + b + " on " + OSName + ".");
+	}
 
-	$('.browser-version span').text( $('.'+browserName.toLowerCase()).text() + ' ' + browserVersion );
-	$('.'+browserName.toLowerCase()).addClass('hide');
-	
+	setIcon(bName);
 
-	
+	$('.browser.' + bName).parents('li').remove();
 });
-
-
-// var browserDetect = {
-// 	init: function() {
-// 		if (typeof navigator.userAgent === 'undefined') {
-// 			browserDetect.showInfo('navigator.userAgent is not available in your browser.');
-// 		} else if ( $(this).attr('id') === 'navigator-obj' ) {
-// 			browserDetect.navigatorObj();
-// 		} else {
-// 			browserDetect.detectJS();
-// 		}
-// 	},
-
-// 	navigatorObj: function() {
-// 		browserDetect.showInfo(navigator.userAgent);
-// 	},
-
-// 	detectJS: function() {
-// 		b = detect.parse(navigator.userAgent);
-
-// 		if (b.device.type === 'Desktop') {
-// 			browserDetect.showInfo(
-// 				'Your browser is ' + b.browser.name + '</br>' +
-// 				'Your device type is ' + b.device.type + '</br>' +
-// 				'Your operating system is ' + b.os.name + '</br>'
-// 			);
-// 		} else {
-// 			browserDetect.showInfo('Sorry! Come back later!');
-// 		}
-// 	},
-
-// 	showInfo: function(m) {
-// 		$('#message-area').html(m);
-// 	}
-// }
-
-// $(document).ready(function() {
-// 	browserDetect.init();
-// });
