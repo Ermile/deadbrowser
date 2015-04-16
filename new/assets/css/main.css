@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: #EAEBED;
+}
+
+h4 {
+	color: #3A3A3A;
+}
+
+.header {
+	padding: 20px 0;
+	background: #FFF;
+	-webkit-box-shadow: 1px 1px 5px 0 #C4C5C6;
+	   -moz-box-shadow: 1px 1px 5px 0 #C4C5C6;
+			box-shadow: 1px 1px 5px 0 #C4C5C6;
+}
+
+.header a {
+	text-decoration: none;
+	color: #3A3A3A;	
+}
+
+.header a:hover {
+	text-decoration: underline;
+}
+
+.result {
+	padding: 30px 0 20px;
+}
+
+.result .row {
+	border-bottom: 1px solid #DADADA;
+}
+
+.icon {
+	width: 128px;
+	height: 128px;
+	margin: 0 auto 20px;
+}
+
+.icon.IE {
+	background: url('../img/ie128.png') no-repeat;
+}
+
+.icon.Firefox {
+	background: url('../img/firefox128.png') no-repeat;
+}
+
+.icon.Chrome {
+	background: url('../img/chrome128.png') no-repeat;
+}
+
+.icon.Opera {
+	background: url('../img/opera128.png') no-repeat;
+}
+
+.icon.Safari {
+	background: url('../img/safari128.png') no-repeat;
+}
+
+.query {
+	text-align: center;
+	color: #3A3A3A;
+}
+
+.browsers {
+	text-align: center;
+}
+
+.browsers-ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 15px;
+}
+
+.browsers-ul li a {
+	text-decoration: none;
+	color: #3A3A3A;
+}
+
+.browser {
+	display: block;
+	width: 64px;
+	height: 64px;
+}
+
+.browser.IE {
+	background: url('../img/ie64.png') no-repeat;
+}
+
+.browser.Firefox {
+	background: url('../img/firefox64.png') no-repeat;
+}
+
+.browser.Chrome {
+	background: url('../img/chrome64.png') no-repeat;
+}
+
+.browser.Opera {
+	background: url('../img/opera64.png') no-repeat;
+}
+
+.browser.Safari {
+	background: url('../img/safari64.png') no-repeat;
+}
+
+.browser-name {
+	display: block;
+	padding-top: 5px;
+	color: #EAEBED;
+	-webkit-transition: color .2s linear;
+	   -moz-transition: color .2s linear;
+	    -ms-transition: color .2s linear;
+	     -o-transition: color .2s linear;
+	        transition: color .2s linear;
+}
+
+.browsers-ul li a:hover .browser-name {
+	color: #3A3A3A;
+}
+
+/*Helper Classes*/
+.bold {
+	font-weight: 700;
+}
