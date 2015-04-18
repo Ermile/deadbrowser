@@ -28,22 +28,22 @@ class view extends \mvc\view
 	    // Next get the name of the useragent yes seperately and for good reason
 	    if(preg_match('/MSIE/i',$u_agent) && !preg_match('/Opera/i',$u_agent)) 
 	    { 
-	        $bname = 'Internet Explorer'; 
+	        $bname = 'IE'; 
 	        $ub = "MSIE"; 
 	    } 
 	    elseif(preg_match('/Firefox/i',$u_agent)) 
 	    { 
-	        $bname = 'Mozilla Firefox'; 
+	        $bname = 'Firefox'; 
 	        $ub = "Firefox"; 
 	    } 
 	    elseif(preg_match('/Chrome/i',$u_agent)) 
 	    { 
-	        $bname = 'Google Chrome'; 
+	        $bname = 'Chrome'; 
 	        $ub = "Chrome"; 
 	    } 
 	    elseif(preg_match('/Safari/i',$u_agent)) 
 	    { 
-	        $bname = 'Apple Safari'; 
+	        $bname = 'Safari'; 
 	        $ub = "Safari"; 
 	    } 
 	    elseif(preg_match('/Opera/i',$u_agent)) 
