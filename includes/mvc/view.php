@@ -28,7 +28,7 @@ class view extends \lib\mvc\view
 		$this->data->display['account'] = "content/home/layout.html";
 
 		// disable common.js
-		// $this->include->js_main = false;
+		$this->include->js_main = false;
 	}
 }
 ?>

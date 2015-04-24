@@ -16,7 +16,6 @@ body {
 .table {
 	width: 650px;
 	margin: 0 auto;
-	table-layout: fixed;
 }
 
 .table img {
@@ -27,4 +26,9 @@ body {
 .center {
 	font-family: Tahoma, sans-serif;
 	text-align: center;
+}
+
+/* IE 6 to 8 */
+@media \0screen\,screen\9 {
+    body { background: green; }
 }
