@@ -30,5 +30,5 @@ body {
 
 /* IE 6 to 8 */
 @media \0screen\,screen\9 {
-    body { background: green; }
+    body { font-family: tahoma, sans-serif; }
 }

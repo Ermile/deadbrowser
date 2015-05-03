@@ -8,72 +8,143 @@
 
   <div class="header"></div>
 
-  <table class="table">
-    <tbody>
-      <tr>
-        <td height="15"></td>
-      </tr>
-      
-      <tr>
-        <td colspan="5">
-          <img src="{{url.static}}images/{{browser.name}}128.png">
-        </td>
-      </tr>
-      
-      <tr>
-        <td height="25"></td>
-      </tr>
-      
-      <tr>
-        <td colspan="5">
-          <h4 class="center">You're using {{browser.name}} {{browser.version}} on {{browser.platform}}.</h4>
-        </td>
-      </tr>
-      
-      <tr>
-        <td height="25"></td>
-      </tr>
-      
-      <tr>
-        <td colspan="5">
-          <h6 class="center" style="font-size: 16px;">Try a different browser...</h6>
-        </td>
-      </tr>
 
-      <tr>
-        <td height="25"></td>
-      </tr>
-      
-      <tr>
-        <td>
-          <a href="http://windows.microsoft.com/en-GB/internet-explorer/download-ie">
-            <img src="{{url.static}}images/ie64.png" width="64" height="64">
-          </a>
-        </td>
-        
-        <td>
-          <a href="https://www.mozilla.org/en-GB/firefox/new/">
-            <img src="{{url.static}}images/firefox64.png" width="64" height="64">
-          </a>
-        </td>
-        
-        <td>
-          <a href="https://www.google.com/chrome/browser/desktop/">
-            <img src="{{url.static}}images/chrome64.png" width="64" height="64">
-          </a>
-        </td>
-        
-        <td>
-          <a href="http://www.opera.com/">
-            <img src="{{url.static}}images/opera64.png" width="64" height="64">
-          </a>
-        </td>
-        
-        <td>
-          <img src="{{url.static}}images/safari64.png" width="64" height="64">
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+  {% if old == true %}
+    
+    <table class="table">
+        <tbody>
+          <tr>
+            <td height="15"></td>
+          </tr>
+          
+          <tr>
+            <td colspan="5">
+              <img src="{{url.static}}images/{{browser.browser_name}}128.{{exec}}">
+            </td>
+          </tr>
+          
+          <tr>
+            <td height="25"></td>
+          </tr>
+          
+          <tr>
+            <td colspan="5">
+              <h4 class="center">You're using {{name}} {{browser.browser_number}} on {{os|capitalize}}.</h4>
+            </td>
+          </tr>
+          
+          <tr>
+            <td height="25"></td>
+          </tr>
+
+          <tr>
+            <td colspan="5">
+              <h6 class="center">{{message}}</h6>
+            </td>
+          </tr>
+          
+          <tr>
+            <td height="25"></td>
+          </tr>
+          
+          <tr>
+            <td colspan="5">
+              <h6 class="center" style="font-size: 16px;">Try a different browser...</h6>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="25"></td>
+          </tr>
+          
+          <tr>
+            <td>
+              <a href="http://windows.microsoft.com/en-GB/internet-explorer/download-ie">
+                <img src="{{url.static}}images/msie64.jpg" width="64" height="64">
+              </a>
+            </td>
+            
+            <td>
+              <a href="https://www.mozilla.org/en-GB/firefox/new/">
+                <img src="{{url.static}}images/firefox64.jpg" width="64" height="64">
+              </a>
+            </td>
+            
+            <td>
+              <a href="https://www.google.com/chrome/browser/desktop/">
+                <img src="{{url.static}}images/chrome64.jpg" width="64" height="64">
+              </a>
+            </td>
+            
+            <td>
+              <a href="http://www.opera.com/">
+                <img src="{{url.static}}images/opera64.jpg" width="64" height="64">
+              </a>
+            </td>
+            
+            <td>
+              <img src="{{url.static}}images/safari64.jpg" width="64" height="64">
+            </td>
+          </tr>
+        </tbody>
+      </table><!-- .table -->
+
+  {% else %}
+
+    <div class="result">
+        <div class="container">
+          <div class="row">
+            <div class="twelve columns">
+              <div class="icon"></div>
+              <h4 class="query"></h4>
+            </div><!-- .twelve -->
+          </div><!-- .row -->
+        </div>
+      </div><!-- .result -->
+
+      <div class="browsers">
+        <div class="container">
+          <div class="row">
+            <div class="offset-by-two eight columns">
+              <h5>Try a different browser</h5>
+              <ul class="browsers-ul">
+                <li>
+                  <a href="#">
+                    <span class="browser IE"></span>
+                    <span class="browser-name">IE</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="browser Firefox"></span>
+                    <span class="browser-name">Firefox</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="browser Chrome"></span>
+                    <span class="browser-name">Chrome</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="browser Opera"></span>
+                    <span class="browser-name">Opera</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="browser Safari"></span>
+                    <span class="browser-name">Safari</span>
+                  </a>
+                </li>
+              </ul><!-- .browsers-ul -->
+            </div><!-- .offset-by-two -->
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </div><!-- .browsers -->
+
+  {% endif %}
 
 {%endblock%}

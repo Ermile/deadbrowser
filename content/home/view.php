@@ -6,7 +6,48 @@ class view extends \mvc\view
 
 	function config()
 	{
-		$this->data->b = $this->browser_detection('full_assoc');
+		// Full browser_detection object
+		$this->data->browser = $this->browser_detection('full_assoc');
+		$this->data->name 	 = $this->data->browser['browser_name'];
+		$this->data->os      = $this->data->browser['os'];
+
+		// Check the browser's HTML 5 compatibility
+		if ($this->data->browser['html_type'] == '' || $this->data->browser['html_type'] == 1) {
+			$this->data->old  = true;
+			$this->data->exec = 'jpg';
+		} else {
+			$this->data->old  = false;
+			$this->data->exec = 'png';
+		}
+
+		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
+		if ($this->data->browser['browser_name'] == 'gecko') {
+			$this->data->name = 'Firefox';
+		}
+
+		// By default for windows "os" is "nt". We set it to "windows"
+		if ($this->data->browser['browser_name'] == 'msie') {
+			$this->data->name = 'Internet Explorer';
+		}
+
+		if ($this->data->browser['os'] == 'nt') {
+			$this->data->os = 'windows';
+		}
+
+		// var_dump($this->data->browser);
+
+		$latest = array(
+		    "chrome" => 42.0,
+		    "msie"	 => 11.0
+		);
+
+		foreach ($latest as $key => $value) {
+			if ($this->data->browser['browser_name'] == $key) {
+				if ($this->data->browser['browser_math_number'] < $value) {
+					$this->data->message = $this->data->name . " " . $latest[$this->data->browser['browser_name']] . " is the latest version";
+				}
+			}
+		}
 	}
 
 	/*************************
