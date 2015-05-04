@@ -1,20 +1,85 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-01-26 14:59+0330\n"
-"PO-Revision-Date: 2015-01-26 14:59+0330\n"
+"POT-Creation-Date: 2015-05-04 21:25+0330\n"
+"PO-Revision-Date: 2015-05-04 21:25+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
+
+#: ../../../.././content/home/view.php:21
+#: ../../../.././includes/mvc/view.php:10
+msgid "Your Browser is DEAD!"
+msgstr "مرورگر شما مرده است!"
+
+#: ../../../.././content/home/view.php:27
+msgid "You are Alive!"
+msgstr "شما زنده هستید!"
+
+#: ../../../.././content/home/view.php:33
+msgid "firefox"
+msgstr "فایرفاکس"
+
+#: ../../../.././content/home/view.php:38
+msgid "google chrome"
+msgstr "گوگل کروم"
+
+#: ../../../.././content/home/view.php:43
+msgid "internet explorer"
+msgstr "اینترنت اکسپلورر"
+
+#: ../../../.././content/home/view.php:47
+msgid "windows"
+msgstr "ویندوز"
+
+#: ../../../.././content/home/view.php:52
+msgid "android"
+msgstr "اندروید"
+
+#: ../../../.././content/home/view.php:54
+msgid "linux"
+msgstr "لینوکس"
+
+#: ../../../.././content/home/view.php:59
+msgid "You are using "
+msgstr "شما در حال استفاده از "
+
+#: ../../../.././content/home/view.php:59
+msgid " on "
+msgstr " در "
+
+#: ../../../.././content/home/view.php:73
+msgid "is the latest version"
+msgstr "آخرین نسخه است"
+
+#: ../../../.././content/home/view.php:75
+msgid "Hooray! You are using the latest version of"
+msgstr "هورا! شما در حال استفاده از آخرین نسخه این مرورگر هستید:"
+
+#: ../../../.././content/home/view.php:82
+msgid "Sorry! We have not enough information about your browser"
+msgstr "متاسفیم! ما اطلاعات کافی درباره مرورگر شما نداریم"
+
+#: ../../../.././content/home/view.php:83
+msgid "undefined"
+msgstr "ناشناس"
+
+#: ../../../.././content_cp/home/controller.php:10
+msgid "first of all, you must login to system!"
+msgstr "شما ابتدا باید وارد سیستم شوید!"
+
+#: ../../../.././content_cp/home/controller.php:37
+msgid "Not found!"
+msgstr "یافت نشد"
 
 #: ../../../.././includes/cls/form/account.php:20
 msgid "Enter your registered mobile"
@@ -30,7 +95,6 @@ msgid "Enter your password"
 msgstr "کلمه عبور خود را وارد کنید"
 
 #: ../../../.././includes/cls/form/account.php:23
-#: ../../../.././includes/languages/twig_translation.php:20
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -139,7 +203,7 @@ msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: ../../../.././includes/languages/static_translation.php:33
-#: ../../../.././includes/languages/twig_translation.php:19
+#: ../../../.././includes/languages/twig_translation.php:43
 msgid "Logout"
 msgstr "خروج از سیستم"
 
@@ -148,11 +212,11 @@ msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:37
+#: ../../../.././includes/languages/twig_translation.php:14
 msgid "Options"
 msgstr "تنظیمات"
 
 #: ../../../.././includes/languages/static_translation.php:38
-#: ../../../.././includes/languages/twig_translation.php:21
 msgid "Go to"
 msgstr "برو به"
 
@@ -161,10 +225,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:40
+#: ../../../.././includes/languages/twig_translation.php:19
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:41
+#: ../../../.././includes/languages/twig_translation.php:18
 msgid "Actions"
 msgstr "عملیات"
 
@@ -173,6 +239,7 @@ msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/static_translation.php:43
+#: ../../../.././includes/languages/twig_translation.php:24
 msgid "Delete"
 msgstr "حذف"
 
@@ -201,56 +268,148 @@ msgid "Add New"
 msgstr "افزودن"
 
 #: ../../../.././includes/languages/twig_translation.php:6
-msgid "You are using <span>Browser!</span>"
-msgstr "شما در حال استفاده از  <span>Browser!</span> هستید!"
+msgid "Try a different browser"
+msgstr "بقیه رو هم امتحان کنید"
 
 #: ../../../.././includes/languages/twig_translation.php:7
-msgid "Try the latest versions of these browsers!"
-msgstr "از آخرین نسخه یکی از مرورگرهای زیر استفاده کنید"
+msgid "Internet Explorer"
+msgstr "اینترنت اکسپلورر"
 
 #: ../../../.././includes/languages/twig_translation.php:8
-msgid "Firefox"
-msgstr "فایرفاکس"
+msgid "Mozilla Firefox"
+msgstr "موزیلا فایرفاکس"
 
 #: ../../../.././includes/languages/twig_translation.php:9
+msgid "Google Chrome"
+msgstr "گوگل کروم"
+
+#: ../../../.././includes/languages/twig_translation.php:10
 msgid "Opera"
 msgstr "اپرا"
 
-#: ../../../.././includes/languages/twig_translation.php:10
-msgid "Chrome"
-msgstr "کروم"
+#: ../../../.././includes/languages/twig_translation.php:11
+msgid "Apple Safari"
+msgstr "اپل سافاری"
 
-#: ../../../.././includes/languages/twig_translation.php:13
+#: ../../../.././includes/languages/twig_translation.php:15
+msgid "Back to"
+msgstr "بازگشت به"
+
+#: ../../../.././includes/languages/twig_translation.php:20
+msgid "delete record"
+msgstr "حذف رکورد"
+
+#: ../../../.././includes/languages/twig_translation.php:21
+msgid "seriously, are you sure? There's no coming back."
+msgstr ""
+
+#: ../../../.././includes/languages/twig_translation.php:22
+msgid "Cancel"
+msgstr "کنسل"
+
+#: ../../../.././includes/languages/twig_translation.php:23
+msgid "or"
+msgstr "یا"
+
+#: ../../../.././includes/languages/twig_translation.php:27
+msgid "Hello!"
+msgstr "سلام!"
+
+#: ../../../.././includes/languages/twig_translation.php:28
+msgid "Welcome to Saloos control panel."
+msgstr ""
+
+#: ../../../.././includes/languages/twig_translation.php:33
+msgid "Dashboard"
+msgstr "داشبورد"
+
+#: ../../../.././includes/languages/twig_translation.php:34
+msgid "Posts"
+msgstr "نوشته ها"
+
+#: ../../../.././includes/languages/twig_translation.php:35
+msgid "Pages"
+msgstr ""
+
+#: ../../../.././includes/languages/twig_translation.php:36
+msgid "Terms"
+msgstr "عبارات"
+
+#: ../../../.././includes/languages/twig_translation.php:37
+msgid "Attachments"
+msgstr "ضمیمه ها"
+
+#: ../../../.././includes/languages/twig_translation.php:38
+msgid "Comments"
+msgstr "دیدگاه ها"
+
+#: ../../../.././includes/languages/twig_translation.php:39
+msgid "Users"
+msgstr "کاربران"
+
+#: ../../../.././includes/languages/twig_translation.php:40
+msgid "Javad Evazzadeh"
+msgstr ""
+
+#: ../../../.././includes/languages/twig_translation.php:41
+msgid "My Profile"
+msgstr ""
+
+#: ../../../.././includes/languages/twig_translation.php:42
+msgid "Lock Screen"
+msgstr ""
+
+#: ../../../.././includes/languages/twig_translation.php:44
+msgid "Powered by Saloos."
+msgstr "قدرت گرفته از سالوس."
+
+#: ../../../.././includes/languages/twig_translation.php:45
+msgid "All right reserved."
+msgstr "تمام حقوق محفوظ است."
+
+#: ../../../.././includes/languages/twig_translation.php:46
+msgid "Version"
+msgstr "نگارش"
+
+#: ../../../.././includes/languages/twig_translation.php:49
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:16
-msgid "Home Page"
-msgstr "صفحه نخست"
-
-#: ../../../.././includes/languages/twig_translation.php:17
-msgid "Admin"
-msgstr "مدیریت"
-
-#: ../../../.././includes/languages/twig_translation.php:18
-msgid "Control Panel"
-msgstr "کنترل پنل"
-
 #: ../../../.././includes/mvc/view.php:11
-msgid "Browser Dead"
-msgstr "مرورگر شما مرده است!"
-
-#: ../../../.././includes/mvc/view.php:12
-#: ../../../.././includes/mvc/view.php:15
+#: ../../../.././includes/mvc/view.php:14
 msgid "the place for show your browser is dead! please update it!"
 msgstr "مکانی برای اعلام مرگ مرورگر شما. لطفا به نسخه جدید آپدیت کنید"
 
-#: ../../../.././includes/mvc/view.php:13
+#: ../../../.././includes/mvc/view.php:12
 msgid "use up-to-date browser"
 msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "You are using"
 #~ msgstr "شما در حال استفاده از این مرورگر هستید"
+
+#~ msgid "You are using <span>Browser!</span>"
+#~ msgstr "شما در حال استفاده از  <span>Browser!</span> هستید!"
+
+#~ msgid "Try the latest versions of these browsers!"
+#~ msgstr "از آخرین نسخه یکی از مرورگرهای زیر استفاده کنید"
+
+#~ msgid "Firefox"
+#~ msgstr "فایرفاکس"
+
+#~ msgid "Chrome"
+#~ msgstr "کروم"
+
+#~ msgid "Home Page"
+#~ msgstr "صفحه نخست"
+
+#~ msgid "Admin"
+#~ msgstr "مدیریت"
+
+#~ msgid "Control Panel"
+#~ msgstr "کنترل پنل"
+
+#~ msgid "Browser Dead"
+#~ msgstr "مرورگر شما مرده است!"
 
 #~ msgid "you are logined to system!"
 #~ msgstr "شما قبلا یک بار وارد سیستم شده اید!"
@@ -350,12 +509,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "Error!"
 #~ msgstr "خطا!"
-
-#~ msgid "first of all, you must login to system!"
-#~ msgstr "شما ابتدا باید وارد سیستم شوید!"
-
-#~ msgid "Not found!"
-#~ msgstr "یافت نشد"
 
 #~ msgid "accounts"
 #~ msgstr "اکانت ها"
@@ -474,9 +627,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "attachments"
 #~ msgstr "ضمیمه ها"
 
-#~ msgid "Attachments"
-#~ msgstr "ضمیمه ها"
-
 #~ msgid "attachment"
 #~ msgstr "ضمیمه"
 
@@ -523,9 +673,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgstr "حذف شده"
 
 #~ msgid "comments"
-#~ msgstr "دیدگاه ها"
-
-#~ msgid "Comments"
 #~ msgstr "دیدگاه ها"
 
 #~ msgid "comment"
@@ -768,9 +915,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "posts"
 #~ msgstr "نوشته ها"
 
-#~ msgid "Posts"
-#~ msgstr "نوشته ها"
-
 #~ msgid "Language"
 #~ msgstr "زبان"
 
@@ -954,9 +1098,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "terms"
 #~ msgstr "عبارت ها"
 
-#~ msgid "Terms"
-#~ msgstr "عبارات"
-
 #~ msgid "term"
 #~ msgstr "عبارت"
 
@@ -1092,9 +1233,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "users"
 #~ msgstr "کاربران"
 
-#~ msgid "Users"
-#~ msgstr "کاربران"
-
 #~ msgid "Pass"
 #~ msgstr "کلمه عبور"
 
@@ -1222,9 +1360,7 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
 #~ msgid "Then wait we receive your message and verificate your account"
-#~ msgstr ""
-#~ "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم "
-#~ "کردیم"
+#~ msgstr "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
 
 #~ msgid "click here to login to your account"
 #~ msgstr "برای ورود به اکانت خود کلیک کنید"

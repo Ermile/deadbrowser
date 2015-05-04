@@ -7,7 +7,7 @@ class view extends \lib\mvc\view
 	{
 		// define default value for global
 		// $this->include->css_main     = false;
-		$this->data->site['title']   = T_("Your Browser Is DEAD!");
+		$this->data->site['title']   = T_("Your Browser is DEAD!");
 		$this->data->site['desc']    = T_("the place for show your browser is dead! please update it!");
 		$this->data->site['slogan']  = T_("use up-to-date browser");
 
@@ -29,6 +29,7 @@ class view extends \lib\mvc\view
 
 		// disable common.js
 		$this->include->js_main = false;
+		$this->include->js      = false;
 	}
 }
 ?>

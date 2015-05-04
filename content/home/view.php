@@ -14,44 +14,49 @@ class view extends \mvc\view
 		$this->data->logo    = '';
 
 		// Check the browser's HTML 5 compatibility
-		if ($this->data->browser['html_type'] == '' || $this->data->browser['html_type'] == 1) {
+		if ($this->data->browser['html_type'] == '' || $this->data->browser['html_type'] == 1)
+		{
 			$this->data->old  = true;
 			$this->data->exec = 'jpg';
-		} else {
+			$this->global->title = T_("Your Browser is DEAD!");
+		}
+		else
+		{
 			$this->data->old  = false;
 			$this->data->exec = 'png';
+			$this->global->title = T_('You are Alive!');
 		}
 
 		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
 		if ($this->data->browser['browser_name'] == 'gecko') {
 			$this->data->browser['browser_name'] = 'firefox';
-			$this->data->name = 'firefox';
+			$this->data->name = T_('firefox');
 		}
 
 		// By default for chrome "browser_name" is "chrome". We set it to "google chrome"
 		if ($this->data->browser['browser_name'] == 'chrome') {
-			$this->data->name = 'google chrome';
+			$this->data->name = T_('google chrome');
 		}
 
 		// By default for internet explorer "browser_name" is "msie". We set it to "internet explorer"
 		if ($this->data->browser['browser_name'] == 'msie') {
-			$this->data->name = 'internet explorer';
+			$this->data->name = T_('internet explorer');
 		}
 
 		if ($this->data->browser['os'] == 'nt') {
-			$this->data->os = 'windows';
+			$this->data->os = T_('windows');
 		}
 
 		if ($this->data->browser['os'] == 'lin') {
 			if ($this->data->browser['ua_type'] == 'mobile') {
-				$this->data->os = 'android';
+				$this->data->os = T_('android');
 			} else {
-				$this->data->os = 'linux';
+				$this->data->os = T_('linux');
 			}
 		}
 
 		// Message 1
-		$this->data->message1 = "You are using " . ucwords($this->data->name) . " " . $this->data->version ." on " . ucfirst($this->data->os) . ".";
+		$this->data->message1 = ucwords(T_($this->data->name)) . " " . $this->data->version;
 
 		$browsers = array(
 			"chrome"  => 42.0,
@@ -65,17 +70,17 @@ class view extends \mvc\view
 		if (isset($browsers[$this->data->browser['browser_name']])) {
 
 			if ($this->data->browser['browser_math_number'] < $browsers[$this->data->browser['browser_name']]) {
-				$this->data->message2 = ucwords($this->data->name) . " " . $browsers[$this->data->browser['browser_name']] . " is the latest version";
+				$this->data->message2 = ucwords($this->data->name) . " " . $browsers[$this->data->browser['browser_name']] . " " . T_("is the latest version");
 			} else {
-				$this->data->message2 = "Hooray! You are using the latest version of " . ucwords($this->data->name);
+				$this->data->message2 = T_("Hooray! You are using the latest version");
 			}
 
 			$this->data->logo = $this->data->browser['browser_name'];
 			
 		} else {
 			
-			$this->data->message2 = "Sorry! We have not enough information about your browser";
-			$this->data->logo     = "undefined"; 
+			$this->data->message2 = T_("Sorry! We have not enough information about your browser");
+			$this->data->logo     = T_("undefined"); 
 
 		}
 
