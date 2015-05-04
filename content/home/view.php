@@ -9,6 +9,7 @@ class view extends \mvc\view
 		// Full browser_detection object
 		$this->data->browser = $this->browser_detection('full_assoc');
 		$this->data->name 	 = $this->data->browser['browser_name'];
+		$this->data->version = $this->data->browser['browser_number'];
 		$this->data->os      = $this->data->browser['os'];
 
 		// Check the browser's HTML 5 compatibility
@@ -22,31 +23,42 @@ class view extends \mvc\view
 
 		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
 		if ($this->data->browser['browser_name'] == 'gecko') {
-			$this->data->name = 'Firefox';
+			$this->data->browser['browser_name'] = 'firefox';
+			$this->data->name = 'firefox';
 		}
 
 		// By default for windows "os" is "nt". We set it to "windows"
 		if ($this->data->browser['browser_name'] == 'msie') {
-			$this->data->name = 'Internet Explorer';
+			$this->data->name = 'internet explorer';
 		}
 
 		if ($this->data->browser['os'] == 'nt') {
 			$this->data->os = 'windows';
 		}
 
-		// var_dump($this->data->browser);
+		// Message 1
+		$this->data->message1 = "You are using " . ucfirst($this->data->name) . " " . $this->data->version ." on " . ucfirst($this->data->os);
 
-		$latest = array(
-		    "chrome" => 42.0,
-		    "msie"	 => 11.0
+		$browsers = array(
+			"chrome"  => 42.0,
+			"firefox" => 38.0,
+			"msie"    => 11.0,
+			"opera"	  => 29.0
 		);
 
-		foreach ($latest as $key => $value) {
-			if ($this->data->browser['browser_name'] == $key) {
-				if ($this->data->browser['browser_math_number'] < $value) {
-					$this->data->message = $this->data->name . " " . $latest[$this->data->browser['browser_name']] . " is the latest version";
-				}
+		// Message 2
+		if (isset($browsers[$this->data->browser['browser_name']])) {
+
+			if ($this->data->browser['browser_math_number'] < $browsers[$this->data->browser['browser_name']]) {
+				$this->data->message2 = $this->data->name . " " . $browsers[$this->data->browser['browser_name']] . " is the latest version";
+			} else {
+				$this->data->message2 = "Hooray! You are using the latest version of " . ucfirst($this->data->name);
 			}
+			
+		} else {
+			
+			$this->data->message2 = "Sorry! We have not enough information about your browser";
+
 		}
 	}
 
