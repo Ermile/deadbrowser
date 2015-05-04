@@ -30,17 +30,21 @@ class view extends \mvc\view
 		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
 		if ($this->data->browser['browser_name'] == 'gecko') {
 			$this->data->browser['browser_name'] = 'firefox';
-			$this->data->name = T_('firefox');
+			$this->data->name = T_('Firefox');
 		}
 
 		// By default for chrome "browser_name" is "chrome". We set it to "google chrome"
 		if ($this->data->browser['browser_name'] == 'chrome') {
-			$this->data->name = T_('google chrome');
+			$this->data->name = T_('Google Chrome');
 		}
 
 		// By default for internet explorer "browser_name" is "msie". We set it to "internet explorer"
 		if ($this->data->browser['browser_name'] == 'msie') {
-			$this->data->name = T_('internet explorer');
+			$this->data->name = T_('Internet Explorer');
+		}
+
+		if ($this->data->browser['browser_name'] == 'safari') {
+			$this->data->name = T_('Safari');
 		}
 
 		if ($this->data->browser['os'] == 'nt') {
@@ -70,7 +74,7 @@ class view extends \mvc\view
 		if (isset($browsers[$this->data->browser['browser_name']])) {
 
 			if ($this->data->browser['browser_math_number'] < $browsers[$this->data->browser['browser_name']]) {
-				$this->data->message2 = ucwords($this->data->name) . " " . $browsers[$this->data->browser['browser_name']] . " " . T_("is the latest version");
+				$this->data->message2 = '<b>'.$browsers[$this->data->browser['browser_name']] . "</b> " . T_("is the latest version");
 			} else {
 				$this->data->message2 = T_("Hooray! You are using the latest version");
 			}

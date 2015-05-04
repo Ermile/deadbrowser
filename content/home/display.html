@@ -55,22 +55,18 @@
   </table>
 
  {% else %}
+
+
+
   <div class="result">
    <div class="container">
     <div class="row">
-     <div class="span12 align-center">
-      <img src="{{url.static}}images/{{logo}}128.png" width="128" height="128" alt="{{name}}" class="main-logo">
-      <h4 class="message1">{{message1}}</h4>
-      <h6 class="message2">{{message2}}</h6>
-     </div>
     </div>
    </div>
   </div>
 
   <div class="browsers {{logo}}">
    <div class="container row">
-   <div class="span12 separator-line"></div>
-
       <h2>{%trans "Try a different browser"%}</h2>
       <ul class="browsers-ul">
        <li class="msie">
@@ -112,6 +108,25 @@
     </div>
    </div>
   </div>
+
+
+
+<div class="row" id="browser-detail">
+ <div class="span6">
+  <img src="{{url.static}}images/{{logo}}.png" alt="{{name}}" id="browser-current">
+   
+ </div>
+ <div class="span5 align-center" id="browser">
+  <h2 id="browser-name">{{name}}</h2>
+  <div id="browser-version">{{browser.browser_number}}</div>
+  <h6 id="browser-msg">{{message2 | raw}}</h6>
+   
+ </div>
+ <div class="offset1"></div>
+</div>
+
+
+
 
  {% endif %}
 {%endblock%}
