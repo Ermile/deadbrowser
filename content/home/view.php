@@ -43,7 +43,11 @@ class view extends \mvc\view
 		}
 
 		if ($this->data->browser['os'] == 'lin') {
-			$this->data->os = 'linux';
+			if ($this->data->browser['ua_type'] == 'mobile') {
+				$this->data->os = 'android';
+			} else {
+				$this->data->os = 'linux';
+			}
 		}
 
 		// Message 1
