@@ -8,9 +8,10 @@ class view extends \mvc\view
 	{
 		// Full browser_detection object
 		$this->data->browser = $this->browser_detection('full_assoc');
-		$this->data->name 	 = $this->data->browser['browser_name'];
+		$this->data->name    = $this->data->browser['browser_name'];
 		$this->data->version = $this->data->browser['browser_number'];
 		$this->data->os      = $this->data->browser['os'];
+		$this->data->logo    = '';
 
 		// Check the browser's HTML 5 compatibility
 		if ($this->data->browser['html_type'] == '' || $this->data->browser['html_type'] == 1) {
@@ -27,7 +28,12 @@ class view extends \mvc\view
 			$this->data->name = 'firefox';
 		}
 
-		// By default for windows "os" is "nt". We set it to "windows"
+		// By default for chrome "browser_name" is "chrome". We set it to "google chrome"
+		if ($this->data->browser['browser_name'] == 'chrome') {
+			$this->data->name = 'google chrome';
+		}
+
+		// By default for internet explorer "browser_name" is "msie". We set it to "internet explorer"
 		if ($this->data->browser['browser_name'] == 'msie') {
 			$this->data->name = 'internet explorer';
 		}
@@ -36,30 +42,40 @@ class view extends \mvc\view
 			$this->data->os = 'windows';
 		}
 
+		if ($this->data->browser['os'] == 'lin') {
+			$this->data->os = 'linux';
+		}
+
 		// Message 1
-		$this->data->message1 = "You are using " . ucfirst($this->data->name) . " " . $this->data->version ." on " . ucfirst($this->data->os);
+		$this->data->message1 = "You are using " . ucwords($this->data->name) . " " . $this->data->version ." on " . ucfirst($this->data->os) . ".";
 
 		$browsers = array(
 			"chrome"  => 42.0,
 			"firefox" => 38.0,
 			"msie"    => 11.0,
-			"opera"	  => 29.0
+			"opera"	  => 29.0,
+			"safari"  => 534.57
 		);
 
 		// Message 2
 		if (isset($browsers[$this->data->browser['browser_name']])) {
 
 			if ($this->data->browser['browser_math_number'] < $browsers[$this->data->browser['browser_name']]) {
-				$this->data->message2 = $this->data->name . " " . $browsers[$this->data->browser['browser_name']] . " is the latest version";
+				$this->data->message2 = ucwords($this->data->name) . " " . $browsers[$this->data->browser['browser_name']] . " is the latest version";
 			} else {
-				$this->data->message2 = "Hooray! You are using the latest version of " . ucfirst($this->data->name);
+				$this->data->message2 = "Hooray! You are using the latest version of " . ucwords($this->data->name);
 			}
+
+			$this->data->logo = $this->data->browser['browser_name'];
 			
 		} else {
 			
 			$this->data->message2 = "Sorry! We have not enough information about your browser";
+			$this->data->logo     = "undefined"; 
 
 		}
+
+		// var_dump($this->data->browser);
 	}
 
 	/*************************

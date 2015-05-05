@@ -1,14 +1,9 @@
 {%extends display.mvc%}
 {%block header_def%}{%endblock%}
-{%block foot_js%}
- <script src="{{url.static}}js/script.js"></script>
-{%endblock%}
 
 {%block content_def%}
 
   <div class="header"></div>
-
-
 
   {% if old == true %}
     
@@ -97,49 +92,55 @@
     <div class="result">
       <div class="container">
         <div class="row">
-          <div class="twelve columns">
-            <div class="icon {{browser.browser_name}}"></div>
-            <h4 class="query">{{message1}}</h4>
-            <h5 class="query">{{message2}}</h5>
+          <div class="twelve columns" style="text-align: center">
+            <img src="{{url.static}}images/{{logo}}128.png" width="128" height="128" alt="{{name}}" class="main-logo">
+            <h4 class="message1">{{message1}}</h4>
+            <h6 class="message2">{{message2}}</h6>
           </div><!-- .twelve -->
+
+          <div class="twelve columns separator-line"></div>
         </div><!-- .row -->
       </div>
     </div><!-- .result -->
 
-    <div class="browsers">
+    <div class="browsers {{logo}}">
       <div class="container">
         <div class="row">
           <div class="offset-by-two eight columns">
-            <h5>Try a different browser</h5>
+            <h6>Try a different browser</h6>
             <ul class="browsers-ul">
-              <li>
+              <li class="msie">
                 <a href="#">
-                  <span class="browser IE"></span>
-                  <span class="browser-name">IE</span>
+                  <img src="{{url.static}}images/msie64.png" width="64" height="64" title="Internet Explorer">
+                  <span class="browser-name">Internet Explorer</span>
                 </a>
               </li>
-              <li>
+              
+              <li class="firefox">
                 <a href="#">
-                  <span class="browser Firefox"></span>
-                  <span class="browser-name">Firefox</span>
+                  <img src="{{url.static}}images/firefox64.png" width="64" height="64" title="Mozilla Firefox">
+                  <span class="browser-name">Mozilla Firefox</span>
                 </a>
               </li>
-              <li>
+
+              <li class="chrome">
                 <a href="#">
-                  <span class="browser Chrome"></span>
-                  <span class="browser-name">Chrome</span>
+                  <img src="{{url.static}}images/chrome64.png" width="64" height="64" title="Google Chrome">
+                  <span class="browser-name">Google Chrome</span>
                 </a>
               </li>
-              <li>
+
+              <li class="opera">
                 <a href="#">
-                  <span class="browser Opera"></span>
+                  <img src="{{url.static}}images/opera64.png" width="64" height="64" title="Opera">
                   <span class="browser-name">Opera</span>
                 </a>
               </li>
-              <li>
+              
+              <li class="safari">
                 <a href="#">
-                  <span class="browser Safari"></span>
-                  <span class="browser-name">Safari</span>
+                  <img src="{{url.static}}images/safari64.png" width="64" height="64" title="Apple Safari">
+                  <span class="browser-name">Apple Safari</span>
                 </a>
               </li>
             </ul><!-- .browsers-ul -->
