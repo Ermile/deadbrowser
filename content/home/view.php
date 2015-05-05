@@ -75,7 +75,7 @@ class view extends \mvc\view
 
 		}
 
-		// var_dump($this->data->browser);
+		var_dump($this->data->browser);
 	}
 
 	/*************************
