@@ -1,11 +1,18 @@
 {%extends display.mvc%}
+
+
 {%block header%}
- <div class="header"></div>
+ <div class="header">
+  <div id="copyright" class="container" role='navigation'>
+   <div class='hint--right' data-hint='{%trans "Ermile is our brand"%}'>
+    <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a> made by <a href="http://ermile.com" title="{{site.desc}}" tabindex="-1" target="_blank">{%trans "Ermile"%}</a>
+   </div>
+  </div>
+ </div>
 {%endblock%}
 
+
 {%block content%}
-
-
 {% if old == true %}
  <table class="table">
   <tbody>
@@ -55,20 +62,29 @@
  </table>
 
 {% else %}
- <div id="wrapper">
-  <div class="browsers {{logo}}">
-   <div class="container row">
+<div class="row auto">
+ <div class="span5" id="browser">
+  <h2 id="browser-name">{{name}}</h2>
+  <div id="browser-version">{{browser.browser_number}}</div>
+  <h6 id="browser-msg">{{message2 | raw}}</h6>
+  <img src="{{url.static}}images/{{logo}}.png" alt="{{name}}" id="browser-img" itemscope>
+ </div>
+
+ <div class="span7">
+
+  <div class="browsers {{logo}}" id='browsers'>
+   <div class="row">
     <h2>{%trans "Try a different browser"%}</h2>
     <ul class="browsers-ul">
 {%if browser.os=='nt'%}
      <li class="msie">
-      <a href="http://www.microsoft.com/windows/ie/default.htm">
-       <img src="{{url.static}}images/msie64.png" width="64" height="64" alt="Internet Explorer"><span class="browser-name">{%trans "Internet Explorer"%}</span>
+      <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+       <img src="{{url.static}}images/msie64.png" width="64" height="64" alt="Internet Explorer"><span class="browser-name">{%trans "Internet Explorer "%}</span>
       </a>
      </li>
 {%endif%}
      <li class="firefox">
-      <a href="http://www.getfirefox.com">
+      <a href="http://www.mozilla.org/firefox/new/">
        <img src="{{url.static}}images/firefox64.png" width="64" height="64" alt="Mozilla Firefox"><span class="browser-name">{%trans "Mozilla Firefox"%}</span>
       </a>
      </li>
@@ -78,34 +94,22 @@
       </a>
      </li>
      <li class="opera">
-      <a href="http://www.opera.com">
+      <a href="http://www.opera.com/download">
        <img src="{{url.static}}images/opera64.png" width="64" height="64" alt="Opera"><span class="browser-name">{%trans "Opera"%}</span>
       </a>
      </li>
+{%if browser.os!='nt'%}
      <li class="safari">
-      <a href="http://www.apple.com/safari">
+      <a href="http://support.apple.com/downloads/#safari">
        <img src="{{url.static}}images/safari64.png" width="64" height="64" alt="Apple Safari"><span class="browser-name">{%trans "Apple Safari"%}</span>
       </a>
      </li>
+{%endif%}
     </ul>
    </div>
   </div>
 
-  <div id='page-footer'>
-   <div class="row" id="browser-detail" role='main'>
-    <div class="span4">
-     <img src="{{url.static}}images/{{logo}}.png" alt="{{name}}" id="browser-current" itemscope>
-    </div>
-
-    <div class="span8 align-center" id="browser">
-     <h2 id="browser-name">{{name}}</h2>
-     <div id="browser-version">{{browser.browser_number}}</div>
-     <h6 id="browser-msg">{{message2 | raw}}</h6>
-      
-    </div>
-   </div>
-  </div>
-  
  </div>
+</div>
  {% endif %}
 {%endblock%}
