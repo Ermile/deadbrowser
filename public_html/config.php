@@ -46,6 +46,14 @@ define('CommingSoon', false);
 define('MultiLanguage', true);
 
 /**
+ * Defaultlanguage
+ * Default: 'en_US'
+ * 
+ * If your site support multi language then you can fix default language for visitors
+ */
+define('DefaultLanguage', 'en_US');
+
+/**
  * SaveAsCookie
  * Default: true
  *
@@ -63,4 +71,28 @@ define('SaveAsCookie', true);
  */
 define('LogVisitors', false);
 
+/**
+ * ControlPanel
+ * Default: false
+ *
+ * add saloos control panel to this project
+ */
+define('ControlPanel', true);
+
+/**
+ * Account
+ * Default: false
+ *
+ * add saloos Account manager to this project
+ * if you want use ermile main account set it as 'ermile'
+ */
+define('Account', true);
+
+/**
+ * LangList
+ * Default serialize (['fa_IR' => 'فارسی', 'en_US' => 'English'])
+ *
+ * List of Site languages
+ */
+define('LangList', serialize (['fa_IR' => 'فارسی', 'en_US' => 'English']));
 ?>

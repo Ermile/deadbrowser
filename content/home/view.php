@@ -63,7 +63,7 @@ class view extends \mvc\view
 		$this->data->message1 = ucwords(T_($this->data->name)) . " " . $this->data->version;
 
 		$browsers = array(
-			"chrome"  => 42.0,
+			"chrome"  => 43.0,
 			"firefox" => 38.0,
 			"msie"    => 11.0,
 			"opera"	  => 29.0,

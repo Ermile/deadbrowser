@@ -6,127 +6,106 @@
 {%block content%}
 
 
- {% if old == true %}
-  <table class="table">
-   <tbody>
-    <tr><td height="15"></td></tr>
-    <tr><td colspan="5"><img src="{{url.static}}images/{{browser.browser_name}}128.{{exec}}"></td></tr>
-    <tr><td height="25"></td></tr>
-    <tr><td colspan="5"><h4 class="center">{{message1}}</h4></td></tr>
-    <tr><td height="25"></td></tr>
-    <tr><td colspan="5"><h6 class="center">{{message2}}</h6></td></tr>
-    <tr><td height="25"></td></tr>
-    <tr><td colspan="5"><h6 class="center" style="font-size: 14px;">{%trans "Try a different browser"%}</h6></td></tr>
-    <tr><td height="25"></td></tr>
+{% if old == true %}
+ <table class="table">
+  <tbody>
+   <tr><td height="15"></td></tr>
+   <tr><td colspan="5"><img src="{{url.static}}images/{{browser.browser_name}}128.{{exec}}"></td></tr>
+   <tr><td height="25"></td></tr>
+   <tr><td colspan="5"><h4 class="center">{{message1}}</h4></td></tr>
+   <tr><td height="25"></td></tr>
+   <tr><td colspan="5"><h6 class="center">{{message2}}</h6></td></tr>
+   <tr><td height="25"></td></tr>
+   <tr><td colspan="5"><h6 class="center" style="font-size: 14px;">{%trans "Try a different browser"%}</h6></td></tr>
+   <tr><td height="25"></td></tr>
 
-    <tr>
-     <td class="msie">
-      <a href="http://www.microsoft.com/windows/ie/default.htm">
-       <img src="{{url.static}}images/msie64.jpg" width="64" height="64" title="Internet Explorer"></a>
-     </td>
-     
-     <td class="firefox">
-      <a href="http://www.getfirefox.com">
-       <img src="{{url.static}}images/firefox64.jpg" width="64" height="64" title="Firefox">
-      </a>
-     </td>
-     
-     <td class="chrome">
-      <a href="http://www.google.com/chrome">
-       <img src="{{url.static}}images/chrome64.jpg" width="64" height="64" title="Chrome">
-      </a>
-     </td>
-     
-     <td class="opera">
-      <a href="http://www.opera.com">
-       <img src="{{url.static}}images/opera64.jpg" width="64" height="64" title="Opera">
-      </a>
-     </td>
-     
-     <td class="safari">
-      <a href="http://www.apple.com/safari">
-       <img src="{{url.static}}images/safari64.jpg" width="64" height="64" title="Safari">  
-      </a>
-     </td>
+   <tr>
+    <td class="msie">
+     <a href="http://www.microsoft.com/windows/ie/default.htm">
+      <img src="{{url.static}}images/msie64.jpg" width="64" height="64" title="Internet Explorer"></a>
+    </td>
+    
+    <td class="firefox">
+     <a href="http://www.getfirefox.com">
+      <img src="{{url.static}}images/firefox64.jpg" width="64" height="64" title="Firefox">
+     </a>
+    </td>
+    
+    <td class="chrome">
+     <a href="http://www.google.com/chrome">
+      <img src="{{url.static}}images/chrome64.jpg" width="64" height="64" title="Chrome">
+     </a>
+    </td>
+    
+    <td class="opera">
+     <a href="http://www.opera.com">
+      <img src="{{url.static}}images/opera64.jpg" width="64" height="64" title="Opera">
+     </a>
+    </td>
+    
+    <td class="safari">
+     <a href="http://www.apple.com/safari">
+      <img src="{{url.static}}images/safari64.jpg" width="64" height="64" title="Safari">  
+     </a>
+    </td>
 
-    </tr>
+   </tr>
 
-   </tbody>
-  </table>
+  </tbody>
+ </table>
 
- {% else %}
-
-
-
-  <div class="result">
-   <div class="container">
-    <div class="row">
-    </div>
-   </div>
-  </div>
-
+{% else %}
+ <div id="wrapper">
   <div class="browsers {{logo}}">
    <div class="container row">
-      <h2>{%trans "Try a different browser"%}</h2>
-      <ul class="browsers-ul">
-       <li class="msie">
-        <a href="http://www.microsoft.com/windows/ie/default.htm">
-         <img src="{{url.static}}images/msie64.png" width="64" height="64" alt="Internet Explorer">
-         <span class="browser-name">{%trans "Internet Explorer"%}</span>
-        </a>
-       </li>
-       
-       <li class="firefox">
-        <a href="http://www.getfirefox.com">
-         <img src="{{url.static}}images/firefox64.png" width="64" height="64" alt="Mozilla Firefox">
-         <span class="browser-name">{%trans "Mozilla Firefox"%}</span>
-        </a>
-       </li>
-
-       <li class="chrome">
-        <a href="http://www.google.com/chrome">
-         <img src="{{url.static}}images/chrome64.png" width="64" height="64" alt="Google Chrome">
-         <span class="browser-name">{%trans "Google Chrome"%}</span>
-        </a>
-       </li>
-
-       <li class="opera">
-        <a href="http://www.opera.com">
-         <img src="{{url.static}}images/opera64.png" width="64" height="64" alt="Opera">
-         <span class="browser-name">{%trans "Opera"%}</span>
-        </a>
-       </li>
-       
-       <li class="safari">
-        <a href="http://www.apple.com/safari">
-         <img src="{{url.static}}images/safari64.png" width="64" height="64" alt="Apple Safari">
-         <span class="browser-name">{%trans "Apple Safari"%}</span>
-        </a>
-       </li>
-      </ul>
-
-    </div>
+    <h2>{%trans "Try a different browser"%}</h2>
+    <ul class="browsers-ul">
+{%if browser.os=='nt'%}
+     <li class="msie">
+      <a href="http://www.microsoft.com/windows/ie/default.htm">
+       <img src="{{url.static}}images/msie64.png" width="64" height="64" alt="Internet Explorer"><span class="browser-name">{%trans "Internet Explorer"%}</span>
+      </a>
+     </li>
+{%endif%}
+     <li class="firefox">
+      <a href="http://www.getfirefox.com">
+       <img src="{{url.static}}images/firefox64.png" width="64" height="64" alt="Mozilla Firefox"><span class="browser-name">{%trans "Mozilla Firefox"%}</span>
+      </a>
+     </li>
+     <li class="chrome">
+      <a href="http://www.google.com/chrome">
+       <img src="{{url.static}}images/chrome64.png" width="64" height="64" alt="Google Chrome"><span class="browser-name">{%trans "Google Chrome"%}</span>
+      </a>
+     </li>
+     <li class="opera">
+      <a href="http://www.opera.com">
+       <img src="{{url.static}}images/opera64.png" width="64" height="64" alt="Opera"><span class="browser-name">{%trans "Opera"%}</span>
+      </a>
+     </li>
+     <li class="safari">
+      <a href="http://www.apple.com/safari">
+       <img src="{{url.static}}images/safari64.png" width="64" height="64" alt="Apple Safari"><span class="browser-name">{%trans "Apple Safari"%}</span>
+      </a>
+     </li>
+    </ul>
    </div>
   </div>
 
+  <div id='page-footer'>
+   <div class="row" id="browser-detail" role='main'>
+    <div class="span4">
+     <img src="{{url.static}}images/{{logo}}.png" alt="{{name}}" id="browser-current" itemscope>
+    </div>
 
-
-<div class="row" id="browser-detail">
- <div class="span6">
-  <img src="{{url.static}}images/{{logo}}.png" alt="{{name}}" id="browser-current">
-   
+    <div class="span8 align-center" id="browser">
+     <h2 id="browser-name">{{name}}</h2>
+     <div id="browser-version">{{browser.browser_number}}</div>
+     <h6 id="browser-msg">{{message2 | raw}}</h6>
+      
+    </div>
+   </div>
+  </div>
+  
  </div>
- <div class="span5 align-center" id="browser">
-  <h2 id="browser-name">{{name}}</h2>
-  <div id="browser-version">{{browser.browser_number}}</div>
-  <h6 id="browser-msg">{{message2 | raw}}</h6>
-   
- </div>
- <div class="offset1"></div>
-</div>
-
-
-
-
  {% endif %}
 {%endblock%}

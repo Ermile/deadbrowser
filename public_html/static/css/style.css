@@ -5,6 +5,7 @@ body {
   background: #EAEBED;
   overflow: hidden;
   position: inherit;
+  min-height: 100%;
 }
 .header {
   padding: 20px 0;
@@ -20,6 +21,8 @@ body {
 .header a:hover {
   text-decoration: underline;
 }
+
+
 .result {
   padding: 30px 0 20px;
 }
@@ -118,7 +121,8 @@ h6 {
   font-size: 1.7em
 }
 #browser-msg{
-  margin-top:100px;
+  margin-top:50px;
+  font-size: 1.2em
 }
 
 #browser-current{
@@ -129,4 +133,5 @@ h6 {
   margin-left: -11vh;
   width: auto;
   height:70vh;
+  max-height: 40vw;
 }
