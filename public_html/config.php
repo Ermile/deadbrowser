@@ -86,7 +86,7 @@ define('ControlPanel', true);
  * add saloos Account manager to this project
  * if you want use ermile main account set it as 'ermile'
  */
-define('Account', true);
+define('Account', 'ermile');
 
 /**
  * LangList

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-05-04 21:25+0330\n"
-"PO-Revision-Date: 2015-05-04 21:25+0330\n"
+"POT-Creation-Date: 2015-06-05 05:16+0330\n"
+"PO-Revision-Date: 2015-06-05 05:16+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -17,120 +17,86 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
 #: ../../../.././content/home/view.php:21
-#: ../../../.././includes/mvc/view.php:10
-msgid "Your Browser is DEAD!"
-msgstr "مرورگر شما مرده است!"
+msgid "You are DEAD!"
+msgstr "شما مرده اید!"
 
-#: ../../../.././content/home/view.php:27
-msgid "You are Alive!"
-msgstr "شما زنده هستید!"
+#: ../../../.././content/home/view.php:22
+msgid "Your browser is Dead! Please update it!"
+msgstr "مرورگر شما مرده است! لطفا آن را بروزرسانی کنید!"
 
-#: ../../../.././content/home/view.php:33
-msgid "firefox"
+#: ../../../.././content/home/view.php:28
+msgid "NO! You are Alive!"
+msgstr "نه! شما زنده هستید!"
+
+#: ../../../.././content/home/view.php:29
+msgid "Your browser is up-to-date! Please enjoy using it!"
+msgstr "مرورگر شما به روز است! از استفاده آن لذت ببرید!"
+
+#: ../../../.././content/home/view.php:35
+msgid "Firefox"
 msgstr "فایرفاکس"
 
-#: ../../../.././content/home/view.php:38
-msgid "google chrome"
+#: ../../../.././content/home/view.php:40
+#: ../../../.././includes/languages/trans_twig.php:12
+#: ../../../.././includes/languages/twig_translation.php:9
+msgid "Google Chrome"
 msgstr "گوگل کروم"
 
-#: ../../../.././content/home/view.php:43
-msgid "internet explorer"
+#: ../../../.././content/home/view.php:45
+#: ../../../.././includes/languages/trans_twig.php:10
+#: ../../../.././includes/languages/twig_translation.php:7
+msgid "Internet Explorer"
 msgstr "اینترنت اکسپلورر"
 
-#: ../../../.././content/home/view.php:47
+#: ../../../.././content/home/view.php:49
+msgid "Safari"
+msgstr "سافاری"
+
+#: ../../../.././content/home/view.php:53
 msgid "windows"
 msgstr "ویندوز"
 
-#: ../../../.././content/home/view.php:52
+#: ../../../.././content/home/view.php:58
 msgid "android"
 msgstr "اندروید"
 
-#: ../../../.././content/home/view.php:54
+#: ../../../.././content/home/view.php:60
 msgid "linux"
 msgstr "لینوکس"
 
-#: ../../../.././content/home/view.php:59
-msgid "You are using "
-msgstr "شما در حال استفاده از "
-
-#: ../../../.././content/home/view.php:59
-msgid " on "
-msgstr " در "
-
-#: ../../../.././content/home/view.php:73
+#: ../../../.././content/home/view.php:79
 msgid "is the latest version"
 msgstr "آخرین نسخه است"
 
-#: ../../../.././content/home/view.php:75
-msgid "Hooray! You are using the latest version of"
-msgstr "هورا! شما در حال استفاده از آخرین نسخه این مرورگر هستید:"
+#: ../../../.././content/home/view.php:81
+msgid "Hooray! You are using the latest version"
+msgstr "هورا! شما در حال استفاده از آخرین نسخه هستید"
 
-#: ../../../.././content/home/view.php:82
+#: ../../../.././content/home/view.php:88
 msgid "Sorry! We have not enough information about your browser"
 msgstr "متاسفیم! ما اطلاعات کافی درباره مرورگر شما نداریم"
 
-#: ../../../.././content/home/view.php:83
+#: ../../../.././content/home/view.php:89
 msgid "undefined"
 msgstr "ناشناس"
 
-#: ../../../.././content_cp/home/controller.php:10
-msgid "first of all, you must login to system!"
-msgstr "شما ابتدا باید وارد سیستم شوید!"
-
-#: ../../../.././content_cp/home/controller.php:37
-msgid "Not found!"
-msgstr "یافت نشد"
-
-#: ../../../.././includes/cls/form/account.php:20
-msgid "Enter your registered mobile"
-msgstr "موبایل ثبت شده را وارد کنید"
-
-#: ../../../.././includes/cls/form/account.php:22
-#: ../../../.././includes/cls/form/symbol.php:23
-msgid "Password"
-msgstr "کلمه عبور"
-
-#: ../../../.././includes/cls/form/account.php:22
-msgid "Enter your password"
-msgstr "کلمه عبور خود را وارد کنید"
-
-#: ../../../.././includes/cls/form/account.php:23
-msgid "Login"
-msgstr "ورود به سیستم"
-
-#: ../../../.././includes/cls/form/symbol.php:15
-msgid "Tel"
-msgstr "تلفن"
-
-#: ../../../.././includes/cls/form/symbol.php:18
-msgid "Mobile"
-msgstr "موبایل"
-
-#: ../../../.././includes/cls/form/symbol.php:20
-msgid "we send a verification code to this number"
-msgstr "کد اعتبارسنجی به این شماره ارسال خواهد شد"
-
-#: ../../../.././includes/cls/form/symbol.php:24
-msgid "between 5-40 character"
-msgstr "بین ۵ تا ۴۰ کاراکتر."
-
-#: ../../../.././includes/cls/form/symbol.php:25
-msgid "between 5-40 character. be tricky!"
-msgstr "بین ۵ تا ۴۰ کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
-
 #: ../../../.././includes/languages/static_translation.php:6
+#: ../../../.././includes/languages/trans_addon.php:48
 msgid "Saloos"
 msgstr "سالوس"
 
 #: ../../../.././includes/languages/static_translation.php:7
+#: ../../../.././includes/languages/trans_addon.php:113
 msgid "Another Project with Saloos"
 msgstr "یک پروژه دیگر با سالوس"
 
 #: ../../../.././includes/languages/static_translation.php:8
+#: ../../../.././includes/languages/trans_addon.php:114
 msgid "Saloos is an artichokes for PHP programming!!"
 msgstr "سالوس یک کنگر برای برنامه نویسی با پی اچ پی!"
 
 #: ../../../.././includes/languages/static_translation.php:9
+#: ../../../.././includes/languages/trans_addon.php:115
 msgid "Saloos is powerfull."
 msgstr "سالوس اقتدار بخش!"
 
@@ -159,59 +125,74 @@ msgid "delete failed!"
 msgstr "عملیات حذف ناموفق بود!"
 
 #: ../../../.././includes/languages/static_translation.php:16
+#: ../../../.././includes/languages/trans_addon.php:123
 msgid "id does not exist!"
 msgstr "این کد در سیستم وجود ندارد!"
 
 #: ../../../.././includes/languages/static_translation.php:17
+#: ../../../.././includes/languages/trans_addon.php:124
 msgid "all require fields must fill"
 msgstr "تمام رکوردهای الزامی باید پر شوند"
 
 #: ../../../.././includes/languages/static_translation.php:18
+#: ../../../.././includes/languages/trans_addon.php:125
 msgid "some fields must be change for update!"
 msgstr "برای بروزرسانی باید حداقل یک فیلد را تغییر دهید!"
 
 #: ../../../.././includes/languages/static_translation.php:19
+#: ../../../.././includes/languages/trans_addon.php:126
+#: ../../../.././includes/languages/trans_twig.php:8
 msgid "Ermile"
 msgstr "ارمایل"
 
 #: ../../../.././includes/languages/static_translation.php:20
+#: ../../../.././includes/languages/trans_addon.php:127
 msgid "ermile"
 msgstr "ارمایل"
 
 #: ../../../.././includes/languages/static_translation.php:21
+#: ../../../.././includes/languages/trans_addon.php:128
 msgid "now we only support Iran!"
 msgstr "در حال حاضر ما فقط به شماره های ایران سرویس می دهیم!"
 
 #: ../../../.././includes/languages/static_translation.php:22
+#: ../../../.././includes/languages/trans_addon.php:129
 msgid "your verification code is"
 msgstr "کد اعتبارسنجی شما"
 
 #: ../../../.././includes/languages/static_translation.php:23
+#: ../../../.././includes/languages/trans_addon.php:130
 msgid "your recovery code is"
 msgstr "کد بازیابی کلمه عبور شما"
 
 #: ../../../.././includes/languages/static_translation.php:24
+#: ../../../.././includes/languages/trans_addon.php:131
 msgid "you account is verified successfully"
 msgstr "اعتبارسنجی اکانت شما با موفقیت به انجام رسید"
 
 #: ../../../.././includes/languages/static_translation.php:25
+#: ../../../.././includes/languages/trans_addon.php:132
 msgid "thanks for using our service"
 msgstr "متشکریم که از سرویس ما استفاده می کنید"
 
 #: ../../../.././includes/languages/static_translation.php:26
+#: ../../../.././includes/languages/trans_addon.php:133
 msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: ../../../.././includes/languages/static_translation.php:33
+#: ../../../.././includes/languages/trans_addon.php:35
 #: ../../../.././includes/languages/twig_translation.php:43
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:34
+#: ../../../.././includes/languages/trans_addon.php:148
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:37
+#: ../../../.././includes/languages/trans_addon.php:44
 #: ../../../.././includes/languages/twig_translation.php:14
 msgid "Options"
 msgstr "تنظیمات"
@@ -225,20 +206,24 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:40
+#: ../../../.././includes/languages/trans_addon.php:39
 #: ../../../.././includes/languages/twig_translation.php:19
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:41
+#: ../../../.././includes/languages/trans_addon.php:93
 #: ../../../.././includes/languages/twig_translation.php:18
 msgid "Actions"
 msgstr "عملیات"
 
 #: ../../../.././includes/languages/static_translation.php:42
+#: ../../../.././includes/languages/trans_addon.php:169
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/static_translation.php:43
+#: ../../../.././includes/languages/trans_addon.php:98
 #: ../../../.././includes/languages/twig_translation.php:24
 msgid "Delete"
 msgstr "حذف"
@@ -248,10 +233,12 @@ msgid "Next page"
 msgstr "صفحه بعد"
 
 #: ../../../.././includes/languages/static_translation.php:51
+#: ../../../.././includes/languages/trans_addon.php:147
 msgid "home"
 msgstr "خانه"
 
 #: ../../../.././includes/languages/static_translation.php:52
+#: ../../../.././includes/languages/trans_addon.php:150
 msgid "Homepage"
 msgstr "صفحه نخست"
 
@@ -267,122 +254,626 @@ msgstr "افزودن"
 msgid "Add New"
 msgstr "افزودن"
 
-#: ../../../.././includes/languages/twig_translation.php:6
-msgid "Try a different browser"
-msgstr "بقیه رو هم امتحان کنید"
+#: ../../../.././includes/languages/trans_addon.php:6
+msgid "click here to login to your account"
+msgstr "برای ورود به اکانت خود کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:7
-msgid "Internet Explorer"
-msgstr "اینترنت اکسپلورر"
+#: ../../../.././includes/languages/trans_addon.php:7
+msgid "are you remember your password!?"
+msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
-#: ../../../.././includes/languages/twig_translation.php:8
-msgid "Mozilla Firefox"
-msgstr "موزیلا فایرفاکس"
+#: ../../../.././includes/languages/trans_addon.php:10
+msgid "already have an account?"
+msgstr "اکانت دارید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:9
-msgid "Google Chrome"
-msgstr "گوگل کروم"
+#: ../../../.././includes/languages/trans_addon.php:11
+msgid "click here to sign in to your account"
+msgstr "برای ورود به اکانت خود کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:10
-msgid "Opera"
-msgstr "اپرا"
+#: ../../../.././includes/languages/trans_addon.php:12
+msgid "Sign In"
+msgstr "ورود به سیستم"
 
-#: ../../../.././includes/languages/twig_translation.php:11
-msgid "Apple Safari"
-msgstr "اپل سافاری"
+#: ../../../.././includes/languages/trans_addon.php:15
+msgid "we send a verification code for you"
+msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
 
-#: ../../../.././includes/languages/twig_translation.php:15
-msgid "Back to"
-msgstr "بازگشت به"
+#: ../../../.././includes/languages/trans_addon.php:16
+msgid "please check your mobile and enter the code"
+msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:20
-msgid "delete record"
-msgstr "حذف رکورد"
+#: ../../../.././includes/languages/trans_addon.php:17
+msgid "don't receive message?"
+msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:21
-msgid "seriously, are you sure? There's no coming back."
+#: ../../../.././includes/languages/trans_addon.php:20
+msgid "Please send number <b>2015</b> to below number"
+msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:21
+msgid "Then wait we receive your message and verificate your account"
 msgstr ""
+"ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
 
-#: ../../../.././includes/languages/twig_translation.php:22
-msgid "Cancel"
-msgstr "کنسل"
-
-#: ../../../.././includes/languages/twig_translation.php:23
-msgid "or"
-msgstr "یا"
-
+#: ../../../.././includes/languages/trans_addon.php:24
 #: ../../../.././includes/languages/twig_translation.php:27
 msgid "Hello!"
 msgstr "سلام!"
 
+#: ../../../.././includes/languages/trans_addon.php:25
 #: ../../../.././includes/languages/twig_translation.php:28
 msgid "Welcome to Saloos control panel."
-msgstr ""
+msgstr "به کنترل پنل سالوس خوش آمدید."
 
-#: ../../../.././includes/languages/twig_translation.php:33
-msgid "Dashboard"
-msgstr "داشبورد"
+#: ../../../.././includes/languages/trans_addon.php:26
+msgid "No. of"
+msgstr "تعداد"
 
+#: ../../../.././includes/languages/trans_addon.php:27
 #: ../../../.././includes/languages/twig_translation.php:34
 msgid "Posts"
 msgstr "نوشته ها"
 
+#: ../../../.././includes/languages/trans_addon.php:28
 #: ../../../.././includes/languages/twig_translation.php:35
 msgid "Pages"
-msgstr ""
+msgstr "صفحات"
 
-#: ../../../.././includes/languages/twig_translation.php:36
-msgid "Terms"
-msgstr "عبارات"
-
+#: ../../../.././includes/languages/trans_addon.php:29
 #: ../../../.././includes/languages/twig_translation.php:37
 msgid "Attachments"
 msgstr "ضمیمه ها"
 
-#: ../../../.././includes/languages/twig_translation.php:38
-msgid "Comments"
-msgstr "دیدگاه ها"
+#: ../../../.././includes/languages/trans_addon.php:30
+msgid "Tags"
+msgstr "کلیدواژه‌ها"
 
+#: ../../../.././includes/languages/trans_addon.php:31
+msgid "Categories"
+msgstr "دسته‌بندی‌ها"
+
+#: ../../../.././includes/languages/trans_addon.php:32
 #: ../../../.././includes/languages/twig_translation.php:39
 msgid "Users"
 msgstr "کاربران"
 
-#: ../../../.././includes/languages/twig_translation.php:40
-msgid "Javad Evazzadeh"
-msgstr ""
+#: ../../../.././includes/languages/trans_addon.php:33
+msgid "Add New Post"
+msgstr "افزودن یک نوشته جدید"
 
+#: ../../../.././includes/languages/trans_addon.php:34
 #: ../../../.././includes/languages/twig_translation.php:41
 msgid "My Profile"
-msgstr ""
+msgstr "پروفایل من"
 
+#: ../../../.././includes/languages/trans_addon.php:36
+msgid "Quick Access"
+msgstr "دسترسی سریع"
+
+#: ../../../.././includes/languages/trans_addon.php:42
+#: ../../../.././includes/languages/twig_translation.php:33
+msgid "Dashboard"
+msgstr "داشبورد"
+
+#: ../../../.././includes/languages/trans_addon.php:43
+#: ../../../.././includes/languages/twig_translation.php:38
+msgid "Comments"
+msgstr "دیدگاه ها"
+
+#: ../../../.././includes/languages/trans_addon.php:45
 #: ../../../.././includes/languages/twig_translation.php:42
 msgid "Lock Screen"
-msgstr ""
+msgstr "قفل کردن"
 
+#: ../../../.././includes/languages/trans_addon.php:46
+msgid "Powered by"
+msgstr "قدرت گرفته از"
+
+#: ../../../.././includes/languages/trans_addon.php:47
+msgid "All right reserved"
+msgstr "تمام حقوق محفوظ است"
+
+#: ../../../.././includes/languages/trans_addon.php:49
+msgid "Last update on"
+msgstr "آخرین بروزرسانی در"
+
+#: ../../../.././includes/languages/trans_addon.php:50
+#: ../../../.././includes/languages/twig_translation.php:46
+msgid "Version"
+msgstr "نگارش"
+
+#: ../../../.././includes/languages/trans_addon.php:53
+#: ../../../.././includes/languages/twig_translation.php:15
+msgid "Back to"
+msgstr "بازگشت به"
+
+#: ../../../.././includes/languages/trans_addon.php:56
+msgid "Enter title here"
+msgstr "عنوان را اینجا وارد کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:57
+msgid "View Post"
+msgstr "نمایش نوشته"
+
+#: ../../../.././includes/languages/trans_addon.php:58
+msgid "Write your post content here"
+msgstr "محتوای نوشته خود را اینجا بنویسید"
+
+#: ../../../.././includes/languages/trans_addon.php:59
+msgid "Excerpt"
+msgstr "چکیده"
+
+#: ../../../.././includes/languages/trans_addon.php:60
+msgid "If excerpt is empty we get it automatically from content"
+msgstr ""
+"اگر چکیده را خالی بگذارید ما آن را به صورت خودکار از روی نوشته پر میکنیم"
+
+#: ../../../.././includes/languages/trans_addon.php:61
+msgid "Summaries of your content that can be used as page description."
+msgstr ""
+"خلاصه ای از نوشته شما که برای نمایش به عنوان توضیح نوشته استفاده می شود."
+
+#: ../../../.././includes/languages/trans_addon.php:62
+msgid "Enter Tags here"
+msgstr "تگ ها را اینجا وارد کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:63
+msgid "Enter Tags"
+msgstr "تگ را وارد کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:64
+msgid "Add"
+msgstr "افزودن"
+
+#: ../../../.././includes/languages/trans_addon.php:65
+msgid "What’s the difference between posts and pages?"
+msgstr "تفاوت بین نوشته و برگه در چیست؟"
+
+#: ../../../.././includes/languages/trans_addon.php:66
+msgid ""
+"Pages are similar to Posts in that they have a title, body text, and "
+"associated metadata, but they are different in that they are not part of the "
+"chronological blog stream, kind of like permanent posts."
+msgstr ""
+"برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی "
+"آن ها در این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، "
+"در حقیقت شبیه به یک پست دائمی هستند."
+
+#: ../../../.././includes/languages/trans_addon.php:67
+msgid "Pages are not categorized or tagged, but can have a hierarchy."
+msgstr ""
+"برگه ها نمیتوانند دسته بندی شوند ولی میتوانند خود دارای ساختار درختی باشند."
+
+#: ../../../.././includes/languages/trans_addon.php:68
+msgid ""
+"You can nest Pages under other Pages by making one the “Parent” of the "
+"other, creating a group of Pages."
+msgstr ""
+"شما می توانید یک برگه را با کمک ویژگی والد به عنوان زیرشاخته برگه ای دیگر "
+"ثبت کنید و به این شکل گروهی از برگه ها بسازید."
+
+#: ../../../.././includes/languages/trans_addon.php:69
+msgid "Publish"
+msgstr "انتشار"
+
+#: ../../../.././includes/languages/trans_addon.php:70
+msgid "Enter slug here"
+msgstr "نامک را اینجا وارد کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:71
+msgid "All Languages"
+msgstr "همه زبان ها"
+
+#: ../../../.././includes/languages/trans_addon.php:72
+msgid "Draft"
+msgstr "پیش نویس"
+
+#: ../../../.././includes/languages/trans_addon.php:73
+msgid "Deleted"
+msgstr "حذف شده"
+
+#: ../../../.././includes/languages/trans_addon.php:74
+msgid "Schedule"
+msgstr "زمانبندی شده"
+
+#: ../../../.././includes/languages/trans_addon.php:75
+msgid "Preview"
+msgstr "پیش نمایش"
+
+#: ../../../.././includes/languages/trans_addon.php:76
+msgid "Update"
+msgstr "بروزرسانی"
+
+#: ../../../.././includes/languages/trans_addon.php:77
+msgid "Page Attributes"
+msgstr "ویژگی های برگه"
+
+#: ../../../.././includes/languages/trans_addon.php:78
+msgid "Enter cat here"
+msgstr "دسته را اینجا وارد کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:81
+msgid "What’s the difference between categories and tags?"
+msgstr "تفاوت بین دسته ها و کلیدواژه ها در چیست؟"
+
+#: ../../../.././includes/languages/trans_addon.php:82
+msgid ""
+"Normally, tags are ad-hoc keywords that identify important information in "
+"your post (names, subjects, etc) that may or may not recur in other posts, "
+"while categories are pre-determined sections."
+msgstr ""
+"به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در "
+"نوشته شما مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها "
+"مشخص نیست، این در حالی است که دسته ها از قبل مشخص شده هستند."
+
+#: ../../../.././includes/languages/trans_addon.php:83
+msgid ""
+"If you think of your site like a book, the categories are like the Table of "
+"Contents and the tags are like the terms in the index."
+msgstr ""
+"اگر سایت را مانند یک کتاب فرض کنید، دسته ها مثل فهرست مطالب و کلیدواژه ها "
+"مثل عبارات خاص در ایندکس هستند."
+
+#: ../../../.././includes/languages/trans_addon.php:86
+msgid "You can use our tools"
+msgstr "شما می توانید از ابزارهای ما استفاده کنید."
+
+#: ../../../.././includes/languages/trans_addon.php:87
+msgid "Extract twig trans func in current project"
+msgstr "بیرون کشیدن متن های قابل ترجمه توئیگ از پروژه جاری"
+
+#: ../../../.././includes/languages/trans_addon.php:88
+msgid "Extract twig trans func in saloos addon"
+msgstr "بیرون کشیدن متن های قابل ترجمه توئیگ از افزونه‌های سالوس"
+
+#: ../../../.././includes/languages/trans_addon.php:89
+msgid "Automatically read database and create sql files"
+msgstr "خواندن دیتابیس و ساخت خودکار فایل های اس کیو ال آن"
+
+#: ../../../.././includes/languages/trans_addon.php:90
+msgid "Show server info"
+msgstr "نمایش اطلاعات سرور"
+
+#: ../../../.././includes/languages/trans_addon.php:94
+#: ../../../.././includes/languages/twig_translation.php:20
+msgid "delete record"
+msgstr "حذف رکورد"
+
+#: ../../../.././includes/languages/trans_addon.php:95
+#: ../../../.././includes/languages/twig_translation.php:21
+msgid "seriously, are you sure? There's no coming back."
+msgstr "مطمئنید؟ بعد از حذف امکان  بازگشت وجود ندارد."
+
+#: ../../../.././includes/languages/trans_addon.php:96
+#: ../../../.././includes/languages/twig_translation.php:22
+msgid "Cancel"
+msgstr "کنسل"
+
+#: ../../../.././includes/languages/trans_addon.php:97
+#: ../../../.././includes/languages/twig_translation.php:23
+msgid "or"
+msgstr "یا"
+
+#: ../../../.././includes/languages/trans_addon.php:101
+msgid "Mobile"
+msgstr "موبایل"
+
+#: ../../../.././includes/languages/trans_addon.php:102
+msgid "Email"
+msgstr "رایانامه"
+
+#: ../../../.././includes/languages/trans_addon.php:103
+msgid "Display Name"
+msgstr "نام برای نمایش عمومی"
+
+#: ../../../.././includes/languages/trans_addon.php:104
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#: ../../../.././includes/languages/trans_addon.php:105
+msgid "Edit your profile data"
+msgstr "اطلاعات پروفایل خود را ویرایش کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:110
+msgid "saloos"
+msgstr "سالوس"
+
+#: ../../../.././includes/languages/trans_addon.php:111
+#: ../../../.././includes/languages/twig_translation.php:40
+msgid "Javad Evazzadeh"
+msgstr "جواد عوض زاده"
+
+#: ../../../.././includes/languages/trans_addon.php:112
+msgid "Hasan Salehi"
+msgstr "حسن صالحی"
+
+#: ../../../.././includes/languages/trans_addon.php:116
+msgid "Insert Successfully"
+msgstr "افزودن با موفقیت انجام شد"
+
+#: ../../../.././includes/languages/trans_addon.php:117
+msgid "Insert Failed!"
+msgstr "افزودن ناموفق بود!"
+
+#: ../../../.././includes/languages/trans_addon.php:118
+msgid "Update Successfully"
+msgstr "بروزرسانی با موفقیت انجام شد"
+
+#: ../../../.././includes/languages/trans_addon.php:119
+msgid "Update Failed!"
+msgstr "بروزرسانی ناموفق بود!"
+
+#: ../../../.././includes/languages/trans_addon.php:120
+msgid "Delete Successfully"
+msgstr "حذف با موفقیت انجام شد"
+
+#: ../../../.././includes/languages/trans_addon.php:121
+msgid "Delete Failed!"
+msgstr "حذف ناموفق بود!"
+
+#: ../../../.././includes/languages/trans_addon.php:122
+msgid "Transaction error"
+msgstr "خطای در تراکنش"
+
+#: ../../../.././includes/languages/trans_addon.php:134
+msgid "Iran"
+msgstr "ایران"
+
+#: ../../../.././includes/languages/trans_addon.php:135
+msgid "iran"
+msgstr "ایران"
+
+#: ../../../.././includes/languages/trans_addon.php:136
+msgid "Qom"
+msgstr "قم"
+
+#: ../../../.././includes/languages/trans_addon.php:137
+msgid "qom"
+msgstr "قم"
+
+#: ../../../.././includes/languages/trans_addon.php:138
+msgid "submit"
+msgstr "تایید"
+
+#: ../../../.././includes/languages/trans_addon.php:139
+msgid "save"
+msgstr "ذخیره"
+
+#: ../../../.././includes/languages/trans_addon.php:140
+msgid "add new"
+msgstr "افزودن"
+
+#: ../../../.././includes/languages/trans_addon.php:141
+msgid "signin"
+msgstr "ورود"
+
+#: ../../../.././includes/languages/trans_addon.php:142
+msgid "sign in"
+msgstr "ورود"
+
+#: ../../../.././includes/languages/trans_addon.php:143
+msgid "signup"
+msgstr "ثبت نام"
+
+#: ../../../.././includes/languages/trans_addon.php:144
+msgid "sign up"
+msgstr "ثبت نام"
+
+#: ../../../.././includes/languages/trans_addon.php:145
+msgid "register"
+msgstr "ثبت نام"
+
+#: ../../../.././includes/languages/trans_addon.php:146
+msgid "create an account"
+msgstr "ساخت اکانت جدید"
+
+#: ../../../.././includes/languages/trans_addon.php:149
+msgid "homepage"
+msgstr "صفحه نخست"
+
+#: ../../../.././includes/languages/trans_addon.php:151
+msgid "admin"
+msgstr "ادمین"
+
+#: ../../../.././includes/languages/trans_addon.php:152
+#: ../../../.././includes/languages/twig_translation.php:36
+msgid "Terms"
+msgstr "عبارات"
+
+#: ../../../.././includes/languages/trans_addon.php:153
 #: ../../../.././includes/languages/twig_translation.php:44
 msgid "Powered by Saloos."
 msgstr "قدرت گرفته از سالوس."
 
+#: ../../../.././includes/languages/trans_addon.php:154
 #: ../../../.././includes/languages/twig_translation.php:45
 msgid "All right reserved."
 msgstr "تمام حقوق محفوظ است."
 
-#: ../../../.././includes/languages/twig_translation.php:46
-msgid "Version"
-msgstr "نگارش"
+#: ../../../.././includes/languages/trans_addon.php:155
+msgid "Login Successfully"
+msgstr "با موفقیت وارد سیستم شدید"
+
+#: ../../../.././includes/languages/trans_addon.php:156
+msgid "Login failed!"
+msgstr "ورود به سیستم ناموفق بود!"
+
+#: ../../../.././includes/languages/trans_addon.php:157
+msgid "Mobile or password is incorrect"
+msgstr "موبایل یا کلمه عبور اشتباه است"
+
+#: ../../../.././includes/languages/trans_addon.php:158
+msgid "Please forward this message to administrator"
+msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:159
+msgid "Assign keywords to your posts using tags"
+msgstr ""
+"از عبارات کلیدی برای تعریف کلیدواژه ها و ارتباط آن به نوشته های استفاده کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:160
+msgid "Use categories to define sections of your site and group related posts"
+msgstr "از دسته ها برای تعریف بخش های سایت و دسته بندی نوشته ها استفاده کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:161
+msgid "Use posts to share your news in specefic category"
+msgstr "از نوشته ها برای انتشار اخبار در موضوعات دلخواه استفاده کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:162
+msgid "Use pages to share your static content"
+msgstr "از برگه ها برای انتشار مطالب ثابت استفاده کنید"
+
+#: ../../../.././includes/languages/trans_addon.php:163
+msgid "page"
+msgstr "صفحه"
+
+#: ../../../.././includes/languages/trans_addon.php:164
+msgid "post"
+msgstr "نوشته ها"
+
+#: ../../../.././includes/languages/trans_addon.php:165
+msgid "tag"
+msgstr "کلیدواژه"
+
+#: ../../../.././includes/languages/trans_addon.php:166
+msgid "category"
+msgstr "دسته"
+
+#: ../../../.././includes/languages/trans_addon.php:167
+msgid "attachment"
+msgstr "ضمیمه"
+
+#: ../../../.././includes/languages/trans_addon.php:168
+msgid "option"
+msgstr "تنظیمات"
+
+#: ../../../.././includes/languages/trans_addon.php:170
+msgid "Control Panel"
+msgstr "کنترل پنل"
+
+#: ../../../.././includes/languages/trans_addon.php:171
+msgid "Editor"
+msgstr "ویراستار"
+
+#: ../../../.././includes/languages/trans_addon.php:172
+msgid "Admin"
+msgstr "مدیریت"
+
+#: ../../../.././includes/languages/trans_addon.php:173
+msgid "Administrator"
+msgstr "مدیر"
+
+#: ../../../.././includes/languages/trans_addon.php:174
+msgid "Writer"
+msgstr "نویسنده"
+
+#: ../../../.././includes/languages/trans_addon.php:177
+msgid "Select"
+msgstr "انتخاب"
+
+#: ../../../.././includes/languages/trans_twig.php:6
+msgid "Ermile is our brand"
+msgstr "ارمایل نام برند ماست"
+
+#: ../../../.././includes/languages/trans_twig.php:7
+msgid "made by"
+msgstr "ساخته شده توسط"
+
+#: ../../../.././includes/languages/trans_twig.php:9
+#: ../../../.././includes/languages/twig_translation.php:6
+msgid "Try a different browser"
+msgstr "بقیه رو هم امتحان کنید"
+
+#: ../../../.././includes/languages/trans_twig.php:11
+#: ../../../.././includes/languages/twig_translation.php:8
+msgid "Mozilla Firefox"
+msgstr "موزیلا فایرفاکس"
+
+#: ../../../.././includes/languages/trans_twig.php:13
+#: ../../../.././includes/languages/twig_translation.php:10
+msgid "Opera"
+msgstr "اپرا"
+
+#: ../../../.././includes/languages/trans_twig.php:14
+#: ../../../.././includes/languages/twig_translation.php:11
+msgid "Apple Safari"
+msgstr "اپل سافاری"
 
 #: ../../../.././includes/languages/twig_translation.php:49
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
+#: ../../../.././includes/mvc/view.php:10
+msgid "Your Browser is DEAD!"
+msgstr "مرورگر شما مرده است!"
+
 #: ../../../.././includes/mvc/view.php:11
 #: ../../../.././includes/mvc/view.php:14
-msgid "the place for show your browser is dead! please update it!"
-msgstr "مکانی برای اعلام مرگ مرورگر شما. لطفا به نسخه جدید آپدیت کنید"
+msgid "We check your browser and say you are alive or dead! It's real"
+msgstr ""
+"ما مرورگر شما را بررسی کرده و به شما میگوییم که زنده اید یا مرده! این واقعی "
+"است"
 
 #: ../../../.././includes/mvc/view.php:12
 msgid "use up-to-date browser"
 msgstr "از مرورگر بروز استفاده کنید"
+
+#~ msgid "Check your browser and say you are alive or dead! It's real"
+#~ msgstr "مرورگر"
+
+#~ msgid "You are Alive!"
+#~ msgstr "شما زنده هستید!"
+
+#~ msgid "firefox"
+#~ msgstr "فایرفاکس"
+
+#~ msgid "google chrome"
+#~ msgstr "گوگل کروم"
+
+#~ msgid "internet explorer"
+#~ msgstr "اینترنت اکسپلورر"
+
+#~ msgid "You are using "
+#~ msgstr "شما در حال استفاده از "
+
+#~ msgid " on "
+#~ msgstr " در "
+
+#~ msgid "Hooray! You are using the latest version of"
+#~ msgstr "هورا! شما در حال استفاده از آخرین نسخه این مرورگر هستید:"
+
+#~ msgid "first of all, you must login to system!"
+#~ msgstr "شما ابتدا باید وارد سیستم شوید!"
+
+#~ msgid "Not found!"
+#~ msgstr "یافت نشد"
+
+#~ msgid "Enter your registered mobile"
+#~ msgstr "موبایل ثبت شده را وارد کنید"
+
+#~ msgid "Password"
+#~ msgstr "کلمه عبور"
+
+#~ msgid "Enter your password"
+#~ msgstr "کلمه عبور خود را وارد کنید"
+
+#~ msgid "Login"
+#~ msgstr "ورود به سیستم"
+
+#~ msgid "Tel"
+#~ msgstr "تلفن"
+
+#~ msgid "we send a verification code to this number"
+#~ msgstr "کد اعتبارسنجی به این شماره ارسال خواهد شد"
+
+#~ msgid "between 5-40 character"
+#~ msgstr "بین ۵ تا ۴۰ کاراکتر."
+
+#~ msgid "between 5-40 character. be tricky!"
+#~ msgstr "بین ۵ تا ۴۰ کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
+
+#~ msgid "the place for show your browser is dead! please update it!"
+#~ msgstr "مکانی برای اعلام مرگ مرورگر شما. لطفا به نسخه جدید آپدیت کنید"
 
 #~ msgid "You are using"
 #~ msgstr "شما در حال استفاده از این مرورگر هستید"
@@ -393,20 +884,11 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "Try the latest versions of these browsers!"
 #~ msgstr "از آخرین نسخه یکی از مرورگرهای زیر استفاده کنید"
 
-#~ msgid "Firefox"
-#~ msgstr "فایرفاکس"
-
 #~ msgid "Chrome"
 #~ msgstr "کروم"
 
 #~ msgid "Home Page"
 #~ msgstr "صفحه نخست"
-
-#~ msgid "Admin"
-#~ msgstr "مدیریت"
-
-#~ msgid "Control Panel"
-#~ msgstr "کنترل پنل"
 
 #~ msgid "Browser Dead"
 #~ msgstr "مرورگر شما مرده است!"
@@ -464,9 +946,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "register successfully"
 #~ msgstr "ثبت نام با موفقیت انجام شد"
-
-#~ msgid "we send a verification code for you"
-#~ msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
 
 #~ msgid "register failed!"
 #~ msgstr "ثبت نام ناموفق بود!"
@@ -609,14 +1088,8 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "product"
 #~ msgstr "محصول"
 
-#~ msgid "admin"
-#~ msgstr "ادمین"
-
 #~ msgid "banklogo"
 #~ msgstr "لوگوی بانک"
-
-#~ msgid "post"
-#~ msgstr "نوشته ها"
 
 #~ msgid "system"
 #~ msgstr "سیستم"
@@ -626,9 +1099,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "attachments"
 #~ msgstr "ضمیمه ها"
-
-#~ msgid "attachment"
-#~ msgstr "ضمیمه"
 
 #~ msgid "Model"
 #~ msgstr "مدل"
@@ -686,9 +1156,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "Author"
 #~ msgstr "کاربر"
-
-#~ msgid "Email"
-#~ msgstr "رایانامه"
 
 #~ msgid "Url"
 #~ msgstr "آدرس"
@@ -828,9 +1295,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "options"
 #~ msgstr "تنظیمات"
 
-#~ msgid "option"
-#~ msgstr "تنظیمات"
-
 #~ msgid "Extra"
 #~ msgstr "اضافی"
 
@@ -888,9 +1352,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 #~ msgid "View"
 #~ msgstr "نمایش"
 
-#~ msgid "Add"
-#~ msgstr "افزودن"
-
 #~ msgid "postmetas"
 #~ msgstr "توضیح اضافی نوشته ها"
 
@@ -899,9 +1360,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "postmeta"
 #~ msgstr "توضیح اضافی نوشته"
-
-#~ msgid "page"
-#~ msgstr "صفحه"
 
 #~ msgid "publish"
 #~ msgstr "زمان انتشار"
@@ -1091,9 +1549,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "cat"
 #~ msgstr "دسته"
-
-#~ msgid "tag"
-#~ msgstr "کلیدواژه"
 
 #~ msgid "terms"
 #~ msgstr "عبارت ها"
@@ -1346,33 +1801,6 @@ msgstr "از مرورگر بروز استفاده کنید"
 
 #~ msgid "by signing up, you agree to the"
 #~ msgstr "با ثبت نام شما موافق هستید با"
-
-#~ msgid "already have an account?"
-#~ msgstr "اکانت دارید؟"
-
-#~ msgid "click here to sign in to your account"
-#~ msgstr "برای ورود به اکانت خود کلیک کنید"
-
-#~ msgid "Sign In"
-#~ msgstr "ورود به سیستم"
-
-#~ msgid "Please send number <b>2015</b> to below number"
-#~ msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
-
-#~ msgid "Then wait we receive your message and verificate your account"
-#~ msgstr "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
-
-#~ msgid "click here to login to your account"
-#~ msgstr "برای ورود به اکانت خود کلیک کنید"
-
-#~ msgid "are you remember your password!?"
-#~ msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
-
-#~ msgid "please check your mobile and enter the code"
-#~ msgstr "پس از بررسی موبایل خود کد را وارد کنید"
-
-#~ msgid "don't receive message?"
-#~ msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
 #~ msgid "Ermile is new"
 #~ msgstr "ارمایل جدید است!"

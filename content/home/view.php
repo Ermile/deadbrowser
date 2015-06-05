@@ -18,13 +18,15 @@ class view extends \mvc\view
 		{
 			$this->data->old  = true;
 			$this->data->exec = 'jpg';
-			$this->global->title = T_("Your Browser is DEAD!");
+			$this->data->site['title'] = T_("You are DEAD!");
+			$this->data->page['desc']    = T_("Your browser is Dead! Please update it!");
 		}
 		else
 		{
 			$this->data->old  = false;
 			$this->data->exec = 'png';
-			$this->global->title = T_('You are Alive!');
+			$this->data->site['title'] = T_('NO! You are Alive!');
+			$this->data->page['desc']    = T_("Your browser is up-to-date! Please enjoy using it!");
 		}
 
 		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
