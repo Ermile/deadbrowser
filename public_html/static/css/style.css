@@ -44,6 +44,12 @@ body {
   max-height: 50vw;
   z-index:-1;
 }
+.rtl #browser-img{
+  left: inherit;
+  right: 0;
+  margin-left: auto;
+  margin-right: -11vh;
+}
 
 #browsers{
   min-height: 50px;
