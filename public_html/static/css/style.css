@@ -24,7 +24,7 @@ body {
 }
 #browser-name{
   font-weight: bold;
-  margin: 0;
+  margin:20px 0 0 0;
 }
 
 #browser-version{
