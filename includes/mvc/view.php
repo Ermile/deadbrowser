@@ -17,7 +17,6 @@ class view extends \lib\mvc\view
 		$this->data->bodyclass       = 'unselectable';
 
 		// disable common.js
-		$this->include->js_main = false;
 		$this->include->js      = false;
 	}
 }

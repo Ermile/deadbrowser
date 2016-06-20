@@ -11,7 +11,7 @@ class view extends \mvc\view
 		$this->data->name    = $this->data->browser['browser_name'];
 		$this->data->version = $this->data->browser['browser_number'];
 		$this->data->os      = $this->data->browser['os'];
-		
+
 		$this->data->logo    = '';
 
 		// Check the browser's HTML 5 compatibility
@@ -92,12 +92,12 @@ class view extends \mvc\view
 			}
 
 			$this->data->logo = $this->data->browser['browser_name'];
-			
+
 		}
 		else
 		{
 			$this->data->message2 = T_("Sorry! We have not enough information about your browser");
-			$this->data->logo     = T_("undefined"); 
+			$this->data->logo     = T_("undefined");
 		}
 
 		if($this->data->browser['browser_name'] == 'msie')
@@ -117,7 +117,7 @@ Date: 2015-07-30
 Copyright (C) 2003-2015
 
 Special thanks to alanjstr for cleaning up the code, especially on function get_item_version(),
-which he improved greatly. Also to Tapio Markula, for his initial inspiration of creating a 
+which he improved greatly. Also to Tapio Markula, for his initial inspiration of creating a
 useable php browser detector. Also to silver Harloe for his ideas about using associative arrays
 to both return and use as main return handler.
 
@@ -147,14 +147,14 @@ This change will will NOT break your existing programming or browser detection f
 
 **************************
 FULL ARRAY RETURN OPTIONS:
- Note that mobile/moz/trident/webkit_data are arrays which could contain null data, so always test first 
+ Note that mobile/moz/trident/webkit_data are arrays which could contain null data, so always test first
  before assuming the mobile/moz/trident/webkit arrays contain any data, ie, if moz or if webkit, then do..
- 
+
  To get this return, you use the 'full' or 'full_assoc' value in the function call, like:
  $a_browser_data = browser_detection('full')
  $a_browser_data = browser_detection('full_assoc')
 **************************
-full - returns this array, listed by array index number: 
+full - returns this array, listed by array index number:
   [0]  - $browser_working
   [1]  - $browser_number
   [2]  - $ie_version
@@ -174,7 +174,7 @@ full - returns this array, listed by array index number:
   [16] - $html_type
   [17] - $a_engine_data
   [18] - $a_trident_data
-   
+
 full_assoc - returns all relevant browser information in an associative array, same as above
              only with string indexes instead of numeric.
   ['browser_working'] - $browser_working,
@@ -215,7 +215,7 @@ ALPHABETICAL DESCRIPTION OF DATA OPTIONS (With 'full' numeric index key first)
      (information not available)
 [1]  ['browser_number'] - [deprecated: 'number'] returns the browser version number, if available,
      otherwise returns '' (information not available)
-[0]  ['browser_working'] [deprecated: 'browser'] - returns the working shorthand browser name: 
+[0]  ['browser_working'] [deprecated: 'browser'] - returns the working shorthand browser name:
      ie, op, moz, konq, saf, ns4, webkit, and some others. If not shorthand, it will probably just
      return the full browser name, like lynx
 [3]  ['dom'] - returns true/false if it is a basic dom browser, ie >= 5, opera >= 5, all new mozillas,
@@ -224,16 +224,16 @@ ALPHABETICAL DESCRIPTION OF DATA OPTIONS (With 'full' numeric index key first)
        [0] - Layout engine name, eg: Presto (Opera);Trident (MSIE);Gecko;Webkit
        [1] - Layout engine full version string, like: 2.03beta4
        [2] - Layout engine math number, like: 2.03
-[16] ['html_type'] - returns following values, numeric rather than t/f, so you can use 
+[16] ['html_type'] - returns following values, numeric rather than t/f, so you can use
      math comparisons for html support, ie: if ( $browser('html_type') > 1 ) then...
      NOTE - DO NOT RELY ON THIS FULLY, ALWAYS TEST FOR SUPPORT ON THE SPECIFIC BROWSER.
      Browser support information here:
      http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28HTML5%29
-     Currently these are the supported return values (as HTML advances, more numbers 
+     Currently these are the supported return values (as HTML advances, more numbers
      will be added in thefuture):
        1 - covers all HTMLs prior to HTML 5. All non html 5 supporting browsers / bots will return 1
        2 - HTML 5 - Basic HTML 5 support. Canvas, Audio, Video, + some others. Test uses layout
-           engine version numbers to determine if it's html5 ready or not. The test does not 
+           engine version numbers to determine if it's html5 ready or not. The test does not
            verify actual html 5 support, you will need to do that yourself with more complex html 5.
        3 - Supports HTML 5 Forms reasonably well. along with basic HTML 5
 [2]  ['ie_version'] - tests to see what general IE it is.
@@ -244,14 +244,14 @@ ALPHABETICAL DESCRIPTION OF DATA OPTIONS (With 'full' numeric index key first)
        ieMac - msie 5.x mac release
        ie4 - msie 4
        old - pre msie 4
-[12] ['mobile_test'] - returns a string of various mobile id methods, from device to os to browser. 
-     If string is not null, should be a mobile. Also see 16, 'ua_type', which will be 'mobile' 
+[12] ['mobile_test'] - returns a string of various mobile id methods, from device to os to browser.
+     If string is not null, should be a mobile. Also see 16, 'ua_type', which will be 'mobile'
      if handheld.
 [13] ['mobile_data'] - returns an array of data about mobiles. Note the browser/os number data is very
      unreliable so don't count on that. No blackberry version handling done explicitly.
      Make sure to test if this is an array because if it's not mobile it will be null, not an array
-     listed by array index number: 
-       [0] - $mobile_device 
+     listed by array index number:
+       [0] - $mobile_device
        [1] - $mobile_browser
        [2] - $mobile_browser_number
        [3] - $mobile_os
@@ -260,7 +260,7 @@ ALPHABETICAL DESCRIPTION OF DATA OPTIONS (With 'full' numeric index key first)
        [6] - $mobile_server_number
        [7] - $mobile_device_number (this was added so has to be end of list to not break existing code)
        [8] - $mobile_tablet (test if not null rather than t/f, returns for example: ipad, android 3-4)
-             Note that this is barebones, but will catch ~98+% (varies year to year) of current 
+             Note that this is barebones, but will catch ~98+% (varies year to year) of current
              tablets at this point. This test will never be perfect due to very little info in tablet ua.
       Note: $mobile_browser only returns if a specifically mobile browser is detected, like minimo.
       Same for mobile os, with the exception of linux. Otherwise the standard script os/browser data
@@ -274,18 +274,18 @@ ALPHABETICAL DESCRIPTION OF DATA OPTIONS (With 'full' numeric index key first)
              gecko engine is running in the browser (eg rv: 1.8)
        [3] - $moz_rv_full - rv number (for full rv, including alpha and beta versions: 1.8.1-b3)
        [4] - $moz_release_date - release date of the browser
-[5]  ['os'] - returns which os is being used - win, nt, mac, OR iphone, blackberry, palmos, palmsource, 
-     symbian, beos, os2, amiga, webtv, linux, unix. 
-[6]  ['os_number'] - returns windows versions, 95, 98, ce, me, nt: 4; 5 [windows 2000]; 
+[5]  ['os'] - returns which os is being used - win, nt, mac, OR iphone, blackberry, palmos, palmsource,
+     symbian, beos, os2, amiga, webtv, linux, unix.
+[6]  ['os_number'] - returns windows versions, 95, 98, ce, me, nt: 4; 5 [windows 2000];
      5.1 [windows xp]; 5.2 [Server 2003]; 6.0 [Windows Vista], 6.1 [Windows 7].
      Only win, nt, mac, iphone return os numbers (mac/iphone return 10 if OS X.)
      OR returns linux distro/unix release name, otherwise returns null
 [15] ['run_time'] - the time it takes this script to execute from start to point of returning value
-     Requires PHP 5 or greater. Returns time in seconds to 8 decimal places: 0.00245687 
+     Requires PHP 5 or greater. Returns time in seconds to 8 decimal places: 0.00245687
      Run time does not count the time used by PHP to include/parse the file initially. That total
      time is about 5-10x longer. Because subsequent script run throughs go VERY fast, you will see
      the seconds go from something like 0.00115204 for first time, to something like 0.00004005
-     for second and more runs. 
+     for second and more runs.
 [4]  ['safe'] - returns true/false, you can determine what makes the browser be safe lower down,
      currently it's set for ns4 and pre version 1 mozillas not being safe, plus all older browsers
 [18] ['trident_data'] - returns array of trident (msie engine) browser data.
@@ -296,12 +296,12 @@ ALPHABETICAL DESCRIPTION OF DATA OPTIONS (With 'full' numeric index key first)
        [3] - $browser_number [the actual MSIE version number (Eg. MSIE: 9.0)]
 [14] ['true_ie_number'] - [deprecated: true_msie_version] returns the true version of msie running,
      ignoring the compat mode version.
-     Note that php will turn 7.0 to 8 when adding 1, so keep that in mind in your tests. 7.1 
+     Note that php will turn 7.0 to 8 when adding 1, so keep that in mind in your tests. 7.1
      will become 8.1 as expected, however. This test currently only tests for 7.x -> 8.x
      FYI: in PHP, 7.0 == 7 is true but 7.0 === 7 is NOT true.
      If this is null but set, then it is NOT running in compatibility mode.
      AS OF MSIE 11 this is not present or used, so all > 11 msie browsers will NOT show compat mode
-[8]  ['ua_type'] [deprecated: 'type'] - returns one of the following: 
+[8]  ['ua_type'] [deprecated: 'type'] - returns one of the following:
        bot (web bot)
        bro (normal browser)
        bbro (simple browser)
@@ -325,9 +325,9 @@ and don't need the test data type excluded.
 3 - turn off mobile and os tests
 ******************************************
 Optional third script parameter, pass the script externally derived UA strings, for testing/
-processing purposes. Idea from Rui Teixeira 
-Note: include a blank second arg when you use the 3rd parameter if the second is not set:  
-example: browser_detection( 'full', '', $test_string_data ) 
+processing purposes. Idea from Rui Teixeira
+Note: include a blank second arg when you use the 3rd parameter if the second is not set:
+example: browser_detection( 'full', '', $test_string_data )
 Using third parameter sets $b_repeat to false in other words, if you use this parameter, the script
 will do the full processing on the UA string, then switch $b_repeat back to true at the end.
 
@@ -340,11 +340,11 @@ by resetting that data with the true UA value.
 // main script, uses two other functions, get_os_data() and get_item_version() as needed
 // Optional $test_excludes is either null or one of the above values
 
-function browser_detection( $which_test, $test_excludes='', $external_ua_string='' ) 
+function browser_detection( $which_test, $test_excludes='', $external_ua_string='' )
 {
 	/**
-	uncomment the global variable declaration if you want the variables to be available on 
-	a global level throughout your php page, make sure that php is configured to support 
+	uncomment the global variable declaration if you want the variables to be available on
+	a global level throughout your php page, make sure that php is configured to support
 	the use of globals first!
 	Use of globals should be avoided however, and they are not necessary with this script
 	**/
@@ -352,16 +352,16 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 	global $a_full_assoc_data, $a_mobile_data, $a_moz_data, $a_engine_data, $a_webkit_data, $b_dom_browser, $b_repeat, $b_safe_browser, $browser_name, $browser_number, $browser_math_number, $browser_user_agent, $browser_working, $html_type, $ie_version, $mobile_test, $moz_type_number, $moz_rv, $moz_rv_full, $moz_release_date, $moz_type, $os_number, $os_type, $layout_engine, $layout_engine_nu, $layout_engine_nu_full, $true_ie_number, $ua_type, $webkit_type, $webkit_type_number;
 	*/
 	$this->script_time(); // set script timer to start timing
-	
+
 	static $a_full_assoc_data, $a_khtml_data, $a_mobile_data, $a_moz_data, $a_engine_data, $a_trident_data, $a_webkit_data, $b_dom_browser, $b_repeat, $b_safe_browser, $browser_name, $browser_number, $browser_math_number, $browser_user_agent, $browser_working, $html_type, $ie_version, $khtml_type, $khtml_type_number, $mobile_test, $moz_type_number, $moz_rv, $moz_rv_full, $moz_release_date, $moz_type, $os_number, $os_type, $layout_engine, $layout_engine_nu, $layout_engine_nu_full, $trident_type, $trident_type_number, $true_ie_number, $ua_type, $webkit_type, $webkit_type_number;
-	
+
 	// switch off the optimization for external ua string testing.
 	if ( $external_ua_string ) {
 		$b_repeat = false;
 	}
 	/**
-	this makes the test only run once no matter how many times you call it since 
-	all the variables are filled on the first run through, it's only a matter of 
+	this makes the test only run once no matter how many times you call it since
+	all the variables are filled on the first run through, it's only a matter of
 	returning the the right ones
 	**/
 	if ( !$b_repeat ) {
@@ -446,13 +446,13 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 		data in string], same for konqueror, then safari, then gecko, since safari navigator user
 		agent id's with 'gecko' in string.
 		Note that $b_dom_browser is set for all  modern dom browsers, this gives you a default to use.
-		
-		array[0] = id string for useragent, array[1] is if dom capable, array[2] is working name 
+
+		array[0] = id string for useragent, array[1] is if dom capable, array[2] is working name
 		for browser, array[3] identifies navigator useragent type
-		
+
 		Note: all browser strings are in lower case to match the strtolower output, this avoids
 		possible detection errors
-		
+
 		Note: These are the navigator user agent types:
 		bro - modern, css supporting browser.
 		bbro - basic browser, text only, table only, defective css implementation
@@ -490,19 +490,19 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 		array( 'ibrowse', false, 'ibrowse', 'bbro' ),// amiga browser
 		array( 'icab', false, 'icab', 'bro' ),// mac browser
 		array( 'crazy browser', true, 'ie', 'bro' ),// uses ie rendering engine
-		
+
 		// search engine spider bots, primary:
 		array( 'answerbus', false, 'answerbus', 'bot' ),// http://www.answerbus.com/, web questions
 		array( 'ask jeeves', false, 'ask', 'bot' ), //jeeves/teoma
 		array( 'teoma', false, 'ask', 'bot' ),//jeeves teoma - leave in this order
 		array( 'baiduspider', false, 'baidu', 'bot' ),// Baiduspider asian search spider
-		array( 'bingbot', false, 'bing', 'bot' ),// bing 
+		array( 'bingbot', false, 'bing', 'bot' ),// bing
 		array( 'boitho.com-dc', false, 'boitho', 'bot' ),//norwegian search engine
 		array( 'exabot', false, 'exabot', 'bot' ),// exabot
 		array( 'fast-webcrawler', false, 'fast', 'bot' ),// Fast AllTheWeb
 		array( 'ia_archiver', false, 'ia_archiver', 'bot' ),// ia archiver
 		array( 'googlebot', false, 'google', 'bot' ),// google
-		array( 'google web preview', false, 'googlewp', 'bot' ),// google preview 
+		array( 'google web preview', false, 'googlewp', 'bot' ),// google preview
 		array( 'mediapartners-google', false, 'adsense', 'bot' ),// google adsense
 		array( 'msnbot', false, 'msn', 'bot' ),// msn search
 		array( 'objectssearch', false, 'objectsearch', 'bot' ),// open source search engine
@@ -514,7 +514,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 		array( 'inktomi', false, 'inktomi', 'bot' ), // inktomi bot
 		array( 'slurp', false, 'inktomi', 'bot' ), // inktomi bot
 		array( 'zyborg', false, 'looksmart', 'bot' ),// looksmart
-		
+
 		// misc bots
 		array( 'almaden', false, 'ibm', 'bot' ),// ibm almaden web crawler
 		array( 'comodospider', false, 'comodospider', 'bot' ),
@@ -533,24 +533,24 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 		array( 'sohu-search', false, 'sohu', 'bot' ),// chinese media company, search component
 		array( 'surveybot', false, 'surveybot', 'bot' ),//
 		array( 'vbseo', false, 'vbseo', 'bot' ),
-		
+
 		// various http utility libaries
 		array( 'w3c_validator', false, 'w3c', 'lib' ), // uses libperl, make first
 		array( 'wdg_validator', false, 'wdg', 'lib' ), //
 		array( 'libwww-perl', false, 'libwww-perl', 'lib' ),
 		array( 'jakarta commons-httpclient', false, 'jakarta', 'lib' ),
 		array( 'python-urllib', false, 'python-urllib', 'lib' ),
-		
+
 		// download apps
 		array( 'getright', false, 'getright', 'dow' ),
 		array( 'wget', false, 'wget', 'dow' ),// open source downloader, obeys robots.txt
-		
+
 		// netscape 4 and earlier tests, put last so spiders don't get caught
 		array( 'mozilla/4.', false, 'ns', 'bbro' ),
 		array( 'mozilla/3.', false, 'ns', 'bbro' ),
 		array( 'mozilla/2.', false, 'ns', 'bbro' )
 		);
-		
+
 		//array( '', false ); // browser array template
 		// note: not using this because chrome < 28 = webkit, >=28 == blink, so can't do normal handling
 		// for now doing a case by case for layout engine
@@ -562,13 +562,13 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 		Thanks to: http://www.zytrax.com/tech/web/firefox-history.html
 		**/
 		$a_gecko_types = array( 'bonecho', 'camino', 'conkeror', 'epiphany', 'fennec', 'firebird', 'flock', 'galeon', 'iceape', 'icecat', 'k-meleon', 'minimo', 'multizilla', 'phoenix', 'skyfire', 'songbird', 'swiftfox', 'seamonkey', 'shadowfox', 'shiretoko', 'iceweasel', 'firefox', 'minefield', 'netscape6', 'netscape', 'rv' );
-		
+
 		$a_khtml_types = array( 'konqueror', 'khtml' );
-		
-		// note: trident only is up to msie 11, they have changed to edge with webkit though MSIE 
+
+		// note: trident only is up to msie 11, they have changed to edge with webkit though MSIE
 		// browser remains present as an option but not default in windows 10
 		$a_trident_types = array( 'ucbrowser', 'ucweb', 'msie' );
-		
+
 		/**
 		webkit types, this is going to expand over time as webkit browsers spread
 		konqueror is probably going to move to webkit, so this is preparing for that
@@ -685,7 +685,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						of msie 8, and we're triggering the  break last condition in the test, as well
 						as the test for a second search string, trident/
 						Sample: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/6.0)
-						
+
 						Handle the new msie 11 ua syntax (search for rv:), sample:
 						Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko
 						so assign msie value back here
@@ -698,7 +698,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						}
 						else {
 							$browser_number = $this->get_item_version( $browser_user_agent, $browser_name, true, 'trident/' );
-							
+
 						}
 						$this->get_set_count( 'set', 0 );
 						$layout_engine_nu_full = $this->get_item_version( $browser_user_agent, 'trident/', '', '' );
@@ -706,7 +706,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						if ( $layout_engine_nu_full  ) {
 							$layout_engine_nu = $this->get_item_math_number( $layout_engine_nu_full );
 							$layout_engine = 'trident';
-							// in compat mode, browser shows as msie 7, for now, check in future msie 
+							// in compat mode, browser shows as msie 7, for now, check in future msie
 							// versions. Note that this isn't used in new gecko type ua, so no compat mode switch
 							if ( strstr( $browser_number, '7.' ) && !$b_gecko_ua ) {
 								$true_ie_number = $this->get_item_math_number( $browser_number ) + ( intval( $layout_engine_nu ) - 3 );
@@ -773,7 +773,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						$browser_number = get_item_version( $browser_user_agent, $browser_name );
 						// opera is leaving version at 9.80 (or xx) for 10.x - see this for explanation
 						// http://dev.opera.com/articles/view/opera-ua-string-changes/
-						if ( strstr( $browser_number, '9.' ) 
+						if ( strstr( $browser_number, '9.' )
 						     && strstr( $browser_user_agent, 'version/' ) ) {
 							get_set_count( 'set', 0 );
 							$browser_number = get_item_version( $browser_user_agent, 'version/' );
@@ -800,7 +800,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						if ( $browser_number < 5 ) {
 							$b_safe_browser = false;
 						}
-						
+
 						break;
 					/**
 					note: webkit returns always the webkit version number, not the specific user
@@ -820,8 +820,8 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 								$webkit_type = $a_webkit_types[$j];
 								// fixes a glitch: new safaris uses version/x.x.x for the safari number
 								// however because safari number is NOT the same as webkit number, going
-								// to keep returning the safari number, not the version/ number. 
-								/* 
+								// to keep returning the safari number, not the version/ number.
+								/*
 								if ( $a_webkit_types[$j] == 'safari'
 								     && strstr( $browser_user_agent, 'version/' ) ) {
 									get_set_count( 'set', 0 );
@@ -837,7 +837,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 								  get_set_count( 'set', 2 );
 								}
 								$webkit_type_number = $this->get_item_version( $browser_user_agent, $webkit_type );
-								
+
 								// }
 								// epiphany hack
 								if ( $a_webkit_types[$j] == 'gtklauncher' ) {
@@ -882,10 +882,10 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 			// delete this part if you want an unknown browser returned
 			$browser_name = substr( $browser_user_agent, 0, strcspn( $browser_user_agent , '();') );
 			// this extracts just the browser name from the string, if something usable was found
-			if ( $browser_name 
+			if ( $browser_name
 			     && preg_match( '/[^0-9][a-z]*-*\ *[a-z]*\ *[a-z]*/', $browser_name, $a_unhandled_browser ) ) {
 				$browser_name = $a_unhandled_browser[0];
-				
+
 				if ( $browser_name == 'blackberry' ) {
 					get_set_count( 'set', 0 );
 				}
@@ -927,7 +927,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 	This is where you return values based on what parameter you used to call the function
 	$which_test is the passed parameter in the initial browser_detection('os') for example returns
 	the os version only.
-	
+
 	Update deprecated parameter names to new names
 	**/
 	switch ( $which_test ) {
@@ -1005,21 +1005,21 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 	switch ( $which_test ) {
 		// returns all relevant browser information in an array with standard numeric indexes
 		case 'full':
-			$a_full_data = array( 
-				$browser_working, 
-				$browser_number, 
-				$ie_version, 
-				$b_dom_browser, 
-				$b_safe_browser, 
-				$os_type, 
-				$os_number, 
-				$browser_name, 
-				$ua_type, 
-				$browser_math_number, 
-				$a_moz_data, 
-				$a_webkit_data, 
-				$mobile_test, 
-				$a_mobile_data, 
+			$a_full_data = array(
+				$browser_working,
+				$browser_number,
+				$ie_version,
+				$b_dom_browser,
+				$b_safe_browser,
+				$os_type,
+				$os_number,
+				$browser_name,
+				$ua_type,
+				$browser_math_number,
+				$a_moz_data,
+				$a_webkit_data,
+				$mobile_test,
+				$a_mobile_data,
 				$true_ie_number,
 				$run_time,
 				$html_type,
@@ -1038,10 +1038,10 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 			// NOT already been sent.
 			if ( !headers_sent() ) {
 				if ( stristr( $_SERVER["HTTP_ACCEPT"],"application/xhtml+xml") ) {
-				
+
 				}
 				else {
-				
+
 				}
 			}
 			break;
@@ -1060,8 +1060,8 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 function get_item_math_number( $pv_browser_number )
 {
 	$browser_math_number = '';
-	if ( $pv_browser_number 
-		   && preg_match( '/^[0-9]*\.*[0-9]*/', $pv_browser_number, $a_browser_math_number ) ) { 
+	if ( $pv_browser_number
+		   && preg_match( '/^[0-9]*\.*[0-9]*/', $pv_browser_number, $a_browser_math_number ) ) {
 		$browser_math_number = $a_browser_math_number[0];
 		//print_r($a_browser_math_number);
 	}
@@ -1075,7 +1075,7 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 	$os_working_type = '';
 	$os_working_number = '';
 	/**
-	packs the os array. Use this order since some navigator user agents will put 'macintosh' 
+	packs the os array. Use this order since some navigator user agents will put 'macintosh'
 	in the navigator user agent string which would make the nt test register true
 	**/
 	$a_mac = array( 'intel mac', 'OS X', 'ppc mac', 'mac68k' );// this is not used currently
@@ -1087,7 +1087,7 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 	// note, order of os very important in os array, you will get failed ids if changed
 	// windows 10 shows android in ua string
 	$a_os_types = array( 'blackberry', 'iphone', 'palmos', 'palmsource', 'symbian', 'beos', 'os2', 'amiga', 'webtv', 'macintosh', 'mac_', 'mac ', 'nt', 'win','android',  $a_unix_types, $a_linux_distros );
-	
+
 	//os tester
 	$i_count = count( $a_os_types );
 	for ( $i = 0; $i < $i_count; $i++ ) {
@@ -1097,11 +1097,11 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 		assign os to global os variable, os flag true on success
 		!strstr($pv_browser_string, "linux" ) corrects a linux detection bug
 		**/
-		if ( !is_array( $os_working_data ) 
-		     && strstr( $pv_browser_string, $os_working_data ) 
+		if ( !is_array( $os_working_data )
+		     && strstr( $pv_browser_string, $os_working_data )
 		     && !strstr( $pv_browser_string, "linux" ) ) {
 			$os_working_type = $os_working_data;
-			
+
 			switch ( $os_working_type ) {
 				// most windows now uses: NT X.Y syntax
 				case 'nt':
@@ -1136,7 +1136,7 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 					elseif ( strstr( $pv_browser_string, '95' ) ) {
 						$os_working_number = '95';
 					}
-					elseif ( ( strstr( $pv_browser_string, '9x 4.9' ) ) 
+					elseif ( ( strstr( $pv_browser_string, '9x 4.9' ) )
 					     || ( strstr( $pv_browser_string, ' me' ) ) ) {
 						$os_working_number = 'me';
 					}
@@ -1167,9 +1167,9 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 					this is a crude test for os x, since safari, camino, ie 5.2, & moz >= rv 1.3
 					are only made for os x
 					**/
-					elseif ( $pv_browser_name == 'saf' 
-					         || $pv_browser_name == 'cam' 
-					         || ( ( $pv_browser_name == 'moz' ) && ( $pv_version_number >= 1.3 ) ) 
+					elseif ( $pv_browser_name == 'saf'
+					         || $pv_browser_name == 'cam'
+					         || ( ( $pv_browser_name == 'moz' ) && ( $pv_version_number >= 1.3 ) )
 					         || ( ( $pv_browser_name == 'ie' ) && ( $pv_version_number >= 5.2 ) ) ) {
 						$os_working_number = 10;
 					}
@@ -1215,7 +1215,7 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 	}
 	// pack the os data array for return to main function
 	$a_os_data = array( $os_working_type, $os_working_number );
-	
+
 	return $a_os_data;
 }
 
@@ -1224,7 +1224,7 @@ Function Info:
 function returns browser number, gecko rv number, or gecko release date
 function get_item_version( $browser_user_agent, $search_string, $substring_length )
 $pv_extra_search='' allows us to set an additional search/exit loop parameter, but we
-only want this running when needed 
+only want this running when needed
 **/
 function get_item_version( $pv_browser_user_agent, $pv_search_string, $pv_b_break_last='', $pv_extra_search='' )
 {
@@ -1240,7 +1240,7 @@ function get_item_version( $pv_browser_user_agent, $pv_search_string, $pv_b_brea
 	$start_pos = 0;
 	this test covers you for multiple occurrences of string, only with ie though
 	with for example google bot you want the first occurance returned, since that's where the
-	numbering happens 
+	numbering happens
 	**/
 	for ( $i = 0; $i < 4; $i++ ) {
 		//start the search after the first string occurrence
@@ -1248,12 +1248,12 @@ function get_item_version( $pv_browser_user_agent, $pv_search_string, $pv_b_brea
 			// update start position if position found
 			$start_pos = strpos( $pv_browser_user_agent, $pv_search_string, $start_pos ) + strlen( $pv_search_string );
 			/**
-			msie (and maybe other userAgents requires special handling because some apps inject 
+			msie (and maybe other userAgents requires special handling because some apps inject
 			a second msie, usually at the beginning, custom modes allow breaking at first instance
 			if $pv_b_break_last $pv_extra_search conditions exist. Since we only want this test
 			to run if and only if we need it, it's triggered by caller passing these values.
 			**/
-			if ( !$pv_b_break_last 
+			if ( !$pv_b_break_last
 			     || ( $pv_extra_search && strstr( $pv_browser_user_agent, $pv_extra_search ) ) ) {
 				break;
 			}
@@ -1269,10 +1269,10 @@ function get_item_version( $pv_browser_user_agent, $pv_search_string, $pv_b_brea
 	**/
 	$start_pos += $this->get_set_count( 'get' );
 	$string_working_number = substr( $pv_browser_user_agent, $start_pos, $substring_length );
-	
+
 	// Find the space, ;, or parentheses that ends the number
 	$string_working_number = substr( $string_working_number, 0, strcspn($string_working_number, ' );/') );
-	
+
 	//make sure the returned value is actually the id number and not a string
 	// otherwise return ''
 	// strcspn( $string_working_number, '0123456789.') == strlen( $string_working_number)
@@ -1317,22 +1317,22 @@ function check_is_mobile( $pv_browser_user_agent )
 	known hand held device os, then check device names, then mobile browser names
 	This list is almost the same but not exactly as the 4 arrays in function below
 	**/
-	$a_mobile_search = array( 
+	$a_mobile_search = array(
 	/**
 	Make sure to use only data here that always will be a mobile, so this list is not
 	identical to the list of get_mobile_data
 	armv may be a laptop like cros so don't use 'armv' or 'linux armv'
 	**/
 	// os
-	'android', 'blackberry', 'epoc', 'palmos', 'palmsource', 'windows ce', 'windows phone os', 'windows phone', 'symbianos', 'symbian os', 'symbian', 'webos', 
+	'android', 'blackberry', 'epoc', 'palmos', 'palmsource', 'windows ce', 'windows phone os', 'windows phone', 'symbianos', 'symbian os', 'symbian', 'webos',
 	// devices - ipod before iphone or fails
 	'benq', 'blackberry', 'danger hiptop', 'ddipocket', ' droid', 'ipad', 'ipod', 'iphone', 'kindle', 'kobo', 'lge-cx', 'lge-lx', 'lge-mx', 'lge vx', 'lge ', 'lge-', 'lg;lx', 'nexus', 'nintendo wii', 'nokia', 'nook', 'palm', 'pdxgw', 'playstation', 'rim', 'sagem', 'samsung', 'sec-sgh', 'sharp', 'sonyericsson', 'sprint', 'zune', 'j-phone', 'n410', 'mot 24', 'mot-', 'htc-', 'htc_', 'htc ', 'playbook', 'sec-', 'sie-m', 'sie-s', 'spv ', 'touchpad', 'vodaphone', 'smartphone', 'midp', 'mobilephone',
 	// browsers
-	'avantgo', 'blazer', 'elaine', 'eudoraweb', 'fennec', 'iemobile',  'minimo', 'mobile safari', 'mobileexplorer', 'opera mobi', 'opera mini', 'netfront', 'opwv', 'polaris', 'puffin', 'samsungbrowser', 'semc-browser', 'skyfire', 'up.browser', 'ucweb', 'ucbrowser', 'webpro/', 'wms pie', 'xiino', 
+	'avantgo', 'blazer', 'elaine', 'eudoraweb', 'fennec', 'iemobile',  'minimo', 'mobile safari', 'mobileexplorer', 'opera mobi', 'opera mini', 'netfront', 'opwv', 'polaris', 'puffin', 'samsungbrowser', 'semc-browser', 'skyfire', 'up.browser', 'ucweb', 'ucbrowser', 'webpro/', 'wms pie', 'xiino',
 	// services - astel out of business
 	'astel', 'docomo', 'novarra-vision', 'portalmmm', 'reqwirelessweb', 'vodafone'
 	);
-	
+
 	// then do basic mobile type search, this uses data from: get_mobile_data()
 	$j_count = count( $a_mobile_search );
 	for ($j = 0; $j < $j_count; $j++) {
@@ -1344,7 +1344,7 @@ function check_is_mobile( $pv_browser_user_agent )
 			}
 		}
 	}
-	
+
 	return $mobile_working_test;
 }
 
@@ -1363,7 +1363,7 @@ function get_mobile_data( $pv_browser_user_agent )
 	$mobile_server = '';
 	$mobile_server_number = '';
 	$mobile_tablet = '';
-	
+
 	// browsers, show it as a handheld, but is not the os
 	// note: crios is actuall chrome on ios, uc need to be before safari
 	// Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
@@ -1382,12 +1382,12 @@ function get_mobile_data( $pv_browser_user_agent )
 	Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.0
 	**/
 	$a_mobile_os = array( 'windows phone os', 'windows phone', 'android', 'blackberry', 'epoc', 'cpu os', 'iphone os', 'palmos', 'palmsource', 'windows ce', 'symbianos', 'symbian os', 'symbian', 'webos'  );
-	
+
 	// sometimes there is just no other id for the unit that the CTS type service/server
 	$a_mobile_server = array( 'astel', 'docomo', 'novarra-vision', 'portalmmm', 'reqwirelessweb', 'vodafone' );
-	
+
 	/**
-	basic tablet detection. Note, android 3 was a tablet only release, android 4 is 
+	basic tablet detection. Note, android 3 was a tablet only release, android 4 is
 	mobile/tablet. gt-p is samsung galaxy tablet (eg, gt-p = gt-p1000); verizon galaxy: SCH-I(xxx)
 	sm-t is SM-T211 galaxy tab 3. Highly unreliable user agents though.
 	note: android 4 is a special case, and is only a tablet if the word 'mobile' is NOT in the string.
@@ -1398,7 +1398,7 @@ function get_mobile_data( $pv_browser_user_agent )
 	' sch-i' is not accurate for tablets
 	**/
 	$a_mobile_tablet = array( 'ipad', 'android 3', 'cros', ' gt-p', 'sm-t', 'kindle', 'kobo', 'nook', 'playbook', 'silk', 'touchpad', 'tablet', 'xoom' );
-	
+
 	$k_count = count( $a_mobile_browser );
 	for ( $k = 0; $k < $k_count; $k++ ) {
 		if ( strstr( $pv_browser_user_agent, $a_mobile_browser[$k] ) ) {
@@ -1471,31 +1471,31 @@ function get_mobile_data( $pv_browser_user_agent )
 		}
 	}
 	// just for cases where we know it's a mobile device already
-	if ( !$mobile_os 
-	     && ( $mobile_browser || $mobile_device || $mobile_server ) 
+	if ( !$mobile_os
+	     && ( $mobile_browser || $mobile_device || $mobile_server )
 	     && strstr( $pv_browser_user_agent, 'linux' ) ) {
 		$mobile_os = 'linux';
 		$mobile_os_number = get_item_version( $pv_browser_user_agent, 'linux' );
 	}
-	
+
 	$a_mobile_data = array( $mobile_device, $mobile_browser, $mobile_browser_number, $mobile_os, $mobile_os_number, $mobile_server, $mobile_server_number, $mobile_device_number, $mobile_tablet );
 	return $a_mobile_data;
 }
 
 function get_html_level( $pv_render_engine, $pv_render_engine_nu )
-{	
+{
 	$html_return = 1;
 	$engine_nu = $pv_render_engine_nu;
 	/**
 	Until further notice, this is the primary comparison table/data used for determining
 	browser support: http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28HTML5%29
-	
+
 	array holding start of browser support types.
 	note; gecko/webkit we know about, trident is msie >= 8 , presto opera >= 10
 	trident numbers are msie 8 or more number - 4; presto is just what it is for that release
 	these are all multiplied by ten to avoid locale math/decimal errors below
 	http://w3c-test.org/html/tests/harness/harness.htm
-	
+
 	NOTE: presto numbers went from 2.8 to 2.12, so you can't use this method, set to 20
 	**/
 	$a_html5_basic = array(
@@ -1518,12 +1518,12 @@ function get_html_level( $pv_render_engine, $pv_render_engine_nu )
 	// but php says that internally it should work fine as intended, ie, locale agnostic
 	// floatval/locales: https://bugs.php.net/bug.php?id=40653
 	$engine_nu = intval( 10 * floatval( $engine_nu ) );
-	
-	if ( array_key_exists( $pv_render_engine, $a_html5_forms ) 
+
+	if ( array_key_exists( $pv_render_engine, $a_html5_forms )
 	     && $a_html5_forms[$pv_render_engine] <= $engine_nu ) {
 		$html_return = 3;
 	}
-	elseif ( array_key_exists( $pv_render_engine, $a_html5_basic ) 
+	elseif ( array_key_exists( $pv_render_engine, $a_html5_basic )
 	         && $a_html5_basic[$pv_render_engine] <= $engine_nu ) {
 		$html_return = 2;
 	}
@@ -1531,7 +1531,7 @@ function get_html_level( $pv_render_engine, $pv_render_engine_nu )
 }
 
 // track total script execution time
-function script_time() 
+function script_time()
 {
 	static $script_time;
 	$elapsed_time = '';
