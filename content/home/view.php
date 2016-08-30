@@ -116,7 +116,7 @@ Version: 5.6.4
 Date: 2015-07-30
 Copyright (C) 2003-2015
 
-Special thanks to alanjstr for cleaning up the code, especially on function get_item_version(),
+Special thanks to alanjstr for cleaning up the code, especially on function $this->get_item_version(),
 which he improved greatly. Also to Tapio Markula, for his initial inspiration of creating a
 useable php browser detector. Also to silver Harloe for his ideas about using associative arrays
 to both return and use as main return handler.
@@ -337,7 +337,7 @@ programming if you require the true UA data to be processed after the final test
 by resetting that data with the true UA value.
 *******************************************/
 
-// main script, uses two other functions, get_os_data() and get_item_version() as needed
+// main script, uses two other functions, get_os_data() and $this->get_item_version() as needed
 // Optional $test_excludes is either null or one of the above values
 
 function browser_detection( $which_test, $test_excludes='', $external_ua_string='' )
@@ -605,11 +605,11 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 					// check your implementation to make sure it works
 					case 'ns':
 						$b_safe_browser = false;
-						$browser_number = get_item_version( $browser_user_agent, 'mozilla' );
+						$browser_number = $this->get_item_version( $browser_user_agent, 'mozilla' );
 						break;
 					case 'khtml':
 						// note that this is the KHTML version number
-						$browser_number = get_item_version( $browser_user_agent, $browser_name );
+						$browser_number = $this->get_item_version( $browser_user_agent, $browser_name );
 						// assign rendering engine data
 						$layout_engine = 'khtml';
 						$layout_engine_nu = get_item_math_number( $browser_number );
@@ -619,9 +619,9 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						for ( $j = 0; $j < $j_count; $j++ ) {
 							if ( strstr( $browser_user_agent, $a_khtml_types[$j] ) ) {
 								$khtml_type = $a_khtml_types[$j];
-								$khtml_type_number = get_item_version( $browser_user_agent, $khtml_type );
+								$khtml_type_number = $this->get_item_version( $browser_user_agent, $khtml_type );
 								$browser_name = $a_khtml_types[$j];
-								$browser_number = get_item_version( $browser_user_agent, $browser_name );
+								$browser_number = $this->get_item_version( $browser_user_agent, $browser_name );
 								break;
 							}
 						}
@@ -635,7 +635,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						**/
 						// this will return alpha and beta version numbers, if present
 						get_set_count( 'set', 0 );
-						$moz_rv_full = get_item_version( $browser_user_agent, 'rv:' );
+						$moz_rv_full = $this->get_item_version( $browser_user_agent, 'rv:' );
 						// this slices them back off for math comparisons
 						$moz_rv = floatval( $moz_rv_full );
 						// this is to pull out specific mozilla versions, firebird, netscape etc..
@@ -643,7 +643,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						for ( $j = 0; $j < $j_count; $j++ ) {
 							if ( strstr( $browser_user_agent, $a_gecko_types[$j] ) ) {
 								$moz_type = $a_gecko_types[$j];
-								$moz_type_number = get_item_version( $browser_user_agent, $moz_type );
+								$moz_type_number = $this->get_item_version( $browser_user_agent, $moz_type );
 								break;
 							}
 						}
@@ -770,26 +770,26 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 						if ( $browser_name == 'opr/' ) {
 							$browser_name = 'opr';
 						}
-						$browser_number = get_item_version( $browser_user_agent, $browser_name );
+						$browser_number = $this->get_item_version( $browser_user_agent, $browser_name );
 						// opera is leaving version at 9.80 (or xx) for 10.x - see this for explanation
 						// http://dev.opera.com/articles/view/opera-ua-string-changes/
 						if ( strstr( $browser_number, '9.' )
 						     && strstr( $browser_user_agent, 'version/' ) ) {
 							get_set_count( 'set', 0 );
-							$browser_number = get_item_version( $browser_user_agent, 'version/' );
+							$browser_number = $this->get_item_version( $browser_user_agent, 'version/' );
 						}
 						get_set_count( 'set', 0 );
-						$layout_engine_nu_full = get_item_version( $browser_user_agent, 'presto/' );
+						$layout_engine_nu_full = $this->get_item_version( $browser_user_agent, 'presto/' );
 						if ( $layout_engine_nu_full ) {
 							$layout_engine = 'presto';
 							$layout_engine_nu = get_item_math_number( $layout_engine_nu_full );
 						}
 						if ( ! $layout_engine_nu_full && $browser_name == 'opr' ) {
 							if ( strstr($browser_user_agent, 'blink') ) {
-								$layout_engine_nu_full = get_item_version( $browser_user_agent, 'blink' );
+								$layout_engine_nu_full = $this->get_item_version( $browser_user_agent, 'blink' );
 							}
 							else {
-								$layout_engine_nu_full = get_item_version( $browser_user_agent, 'webkit' );
+								$layout_engine_nu_full = $this->get_item_version( $browser_user_agent, 'webkit' );
 							}
 							$layout_engine_nu = get_item_math_number( $layout_engine_nu_full );
 							// assign rendering engine data
@@ -825,7 +825,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 								if ( $a_webkit_types[$j] == 'safari'
 								     && strstr( $browser_user_agent, 'version/' ) ) {
 									get_set_count( 'set', 0 );
-									$webkit_type_number = get_item_version( $browser_user_agent, 'version/' );
+									$webkit_type_number = $this->get_item_version( $browser_user_agent, 'version/' );
 								}
 								else {
 								*/
@@ -889,7 +889,7 @@ function browser_detection( $which_test, $test_excludes='', $external_ua_string=
 				if ( $browser_name == 'blackberry' ) {
 					get_set_count( 'set', 0 );
 				}
-				$browser_number = get_item_version( $browser_user_agent, $browser_name );
+				$browser_number = $this->get_item_version( $browser_user_agent, $browser_name );
 			}
 			else {
 				$browser_name = 'NA';
@@ -1157,7 +1157,7 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 						// if it doesn't have a version number, it is os x;
 						if ( strstr( $pv_browser_string, 'os x ' ) ) {
 							// numbers are like: 10_2.4, others 10.2.4
-							$os_working_number = str_replace( '_', '.', get_item_version( $pv_browser_string, 'os x' ) );
+							$os_working_number = str_replace( '_', '.', $this->get_item_version( $pv_browser_string, 'os x' ) );
 						}
 						else {
 							$os_working_number = 10;
@@ -1222,7 +1222,7 @@ function get_os_data ( $pv_browser_string, $pv_browser_name, $pv_version_number 
 /**
 Function Info:
 function returns browser number, gecko rv number, or gecko release date
-function get_item_version( $browser_user_agent, $search_string, $substring_length )
+function $this->get_item_version( $browser_user_agent, $search_string, $substring_length )
 $pv_extra_search='' allows us to set an additional search/exit loop parameter, but we
 only want this running when needed
 **/
@@ -1404,7 +1404,7 @@ function get_mobile_data( $pv_browser_user_agent )
 		if ( strstr( $pv_browser_user_agent, $a_mobile_browser[$k] ) ) {
 			$mobile_browser = $a_mobile_browser[$k];
 			// this may or may not work, highly unreliable because mobile ua strings are random
-			$mobile_browser_number = get_item_version( $pv_browser_user_agent, $mobile_browser );
+			$mobile_browser_number = $this->get_item_version( $pv_browser_user_agent, $mobile_browser );
 			break;
 		}
 	}
@@ -1415,7 +1415,7 @@ function get_mobile_data( $pv_browser_user_agent )
 			if ( $mobile_device == 'blackberry' ) {
 				get_set_count( 'set', 0 );
 			}
-			$mobile_device_number = get_item_version( $pv_browser_user_agent, $mobile_device );
+			$mobile_device_number = $this->get_item_version( $pv_browser_user_agent, $mobile_device );
 			$mobile_device = trim( $mobile_device ); // some of the id search strings have white space
 			break;
 		}
@@ -1426,14 +1426,14 @@ function get_mobile_data( $pv_browser_user_agent )
 			$mobile_os = $a_mobile_os[$k];
 			if ( $mobile_os != 'blackberry' ) {
 				// this may or may not work, highly unreliable
-				$mobile_os_number = str_replace( '_', '.', get_item_version( $pv_browser_user_agent, $mobile_os ) );
+				$mobile_os_number = str_replace( '_', '.', $this->get_item_version( $pv_browser_user_agent, $mobile_os ) );
 			}
 			else {
-				$mobile_os_number = str_replace( '_', '.', get_item_version( $pv_browser_user_agent, 'version' ) );
+				$mobile_os_number = str_replace( '_', '.', $this->get_item_version( $pv_browser_user_agent, 'version' ) );
 				// eg: BlackBerry9000/5.0.0.93 Profile/M....
 				if ( empty( $mobile_os_number ) ) {
 					get_set_count( 'set', 5 );
-					$mobile_os_number = str_replace( '_', '.', get_item_version( $pv_browser_user_agent, $mobile_os ) );
+					$mobile_os_number = str_replace( '_', '.', $this->get_item_version( $pv_browser_user_agent, $mobile_os ) );
 				}
 			}
 			break;
@@ -1444,7 +1444,7 @@ function get_mobile_data( $pv_browser_user_agent )
 		if ( strstr( $pv_browser_user_agent, $a_mobile_server[$k] ) ) {
 			$mobile_server = $a_mobile_server[$k];
 			// this may or may not work, highly unreliable
-			$mobile_server_number = get_item_version( $pv_browser_user_agent, $mobile_server );
+			$mobile_server_number = $this->get_item_version( $pv_browser_user_agent, $mobile_server );
 			break;
 		}
 	}
@@ -1475,7 +1475,7 @@ function get_mobile_data( $pv_browser_user_agent )
 	     && ( $mobile_browser || $mobile_device || $mobile_server )
 	     && strstr( $pv_browser_user_agent, 'linux' ) ) {
 		$mobile_os = 'linux';
-		$mobile_os_number = get_item_version( $pv_browser_user_agent, 'linux' );
+		$mobile_os_number = $this->get_item_version( $pv_browser_user_agent, 'linux' );
 	}
 
 	$a_mobile_data = array( $mobile_device, $mobile_browser, $mobile_browser_number, $mobile_os, $mobile_os_number, $mobile_server, $mobile_server_number, $mobile_device_number, $mobile_tablet );
