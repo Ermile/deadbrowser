@@ -18,10 +18,25 @@ class view extends \mvc\view
 		// Check the browser's HTML 5 compatibility
 		if ($this->data->browser['html_type'] == '' || $this->data->browser['html_type'] == 1 || $this->data->browser['browser_name'] == 'msie')
 		{
-			$this->data->old  = true;
-			$this->data->exec = 'jpg';
+			$this->data->old           = true;
+			$this->data->exec          = 'jpg';
 			$this->data->site['title'] = T_("You are DEAD!");
-			$this->data->page['desc']    = T_("Your browser is Dead! Please update it!");
+			$this->data->page['desc']  = T_("Your browser is Dead! Please update it!");
+
+			if(isset($this->data->browser['browser_name']))
+			{
+				$this->data->page['desc'] .= ' | '. $this->data->browser['browser_name'];
+			}
+
+			if(isset($this->data->browser['browser_math_number']))
+			{
+				$this->data->page['desc'] .= '-'. $this->data->browser['browser_math_number'];
+			}
+
+			if(isset($this->data->browser['os']))
+			{
+				$this->data->page['desc'] .= ' @'. $this->data->browser['os'];
+			}
 		}
 		else
 		{
