@@ -2,10 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square70x70logo src="https://jibres.com/static/images/favicons/mstile-70x70.png?v=4"/>
-            <square150x150logo src="https://jibres.com/static/images/favicons/mstile-150x150.png?v=4"/>
-            <square310x310logo src="https://jibres.com/static/images/favicons/mstile-310x310.png?v=4"/>
-            <wide310x150logo src="https://jibres.com/static/images/favicons/mstile-310x150.png?v=4"/>
+            <square150x150logo src="https://deadbrowser.com/static/images/favicons/mstile-150x150.png"/>
             <TileColor>#da532c</TileColor>
         </tile>
     </msapplication>
