@@ -25,13 +25,17 @@ body {
 #browser-name{
   font-weight: bold;
   margin:20px 0 0 0;
+  line-height: 2em;
 }
 
 #browser-version{
-  font-size: 1.7em
+  font-size: 1.7em;
+  line-height: 1em;
+  margin-bottom: 1em;
 }
 #browser-msg{
   font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 #browser-img{

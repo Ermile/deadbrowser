@@ -3,9 +3,9 @@
 
 {%block header%}
  <div class="header">
-  <div id="copyright" class="container" role='navigation'>
-   <div class='hint--right' data-hint='{%trans "Ermile is our brand"%}'>
-    <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a> {%trans "made by"%} <a href="http://ermile.com" title="{{site.desc}}" tabindex="-1" target="_blank">{%trans "Ermile"%}</a>
+  <div id="copyright" class="cn" role='navigation'>
+   <div>
+    <span>&copy; {{'now'|date('Y')}}</span> <a href="{{url.root}}" tabindex="-1">{{site.title}}</a> {%trans "made by"%} <a href="https://ermile.com" title='{%trans "Ermile is our brand"%}' tabindex="-1" target="_blank">{%trans "Ermile"%}</a>
    </div>
   </div>
  </div>
@@ -48,7 +48,7 @@
 
     <td class="safari">
      <a href="http://apple.com/safari">
-      <img src="{{url.static}}images/safari64.jpg" width="64" height="64" title="Safari">  
+      <img src="{{url.static}}images/safari64.jpg" width="64" height="64" title="Safari">
      </a>
     </td>
 

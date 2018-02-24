@@ -1,5 +1,5 @@
 /** in The name of Allah **/
-Proudly made in IRAN, powered by Saloos.
+Proudly made in IRAN, powered by Dash.
 
 /** TEAM */
 	Javad Evazzadeh Kakroudi
@@ -18,14 +18,18 @@ Proudly made in IRAN, powered by Saloos.
 	Site: http://eahmad.ir
 	Location: Qom, Iran
 
+	Reza Mohiti
+	Contact: rm.biqarar [at] gmail.com
+	Site: http://rezamohiti.ir
+	Location: Qom, Iran
 
 /* THANKS */
 
 
 
 /* SITE */
-	Last update: 06/05/2015
-	Version: 1.0.1
+	Last update: 2018/02/25
+	Version: 2.0.0
 	Language: Farsi / English
 	Doctype: HTML5
 	IDE: Sublime!
