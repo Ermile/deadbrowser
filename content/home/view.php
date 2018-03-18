@@ -7,7 +7,6 @@ class view extends \mvc\view
 	function config()
 	{
 		// Full browser_detection object
-    // $this->data->browser = $this->browser_detection('full_assoc');
 		$this->data->browser = \lib\utility\browserDetection::browser_detection('full_assoc');
 		$this->data->name    = $this->data->browser['browser_name'];
 		$this->data->version = $this->data->browser['browser_number'];
