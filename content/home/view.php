@@ -4,7 +4,7 @@ namespace content\home;
 class view extends \mvc\view
 {
 
-	function config()
+	static function config()
 	{
 		// Full browser_detection object
 		$this->data->browser = \lib\utility\browserDetection::browser_detection('full_assoc');
