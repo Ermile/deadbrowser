@@ -1,11 +1,12 @@
 <?php
 namespace content\home;
 
-class view extends \mvc\view
+class view
 {
 
 	static function config()
 	{
+		return;
 		// Full browser_detection object
 		$this->data->browser = \lib\utility\browserDetection::browser_detection('full_assoc');
 		$this->data->name    = $this->data->browser['browser_name'];
