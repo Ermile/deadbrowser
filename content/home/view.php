@@ -43,6 +43,7 @@ class view
 			\lib\data::old(false);
 			\lib\data::page_title(T_('NO! You are Alive!'));
 			\lib\data::page_desc(T_("Your browser is up-to-date! Please enjoy using it!"));
+			\lib\data::page_special(true);
 		}
 
 		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
