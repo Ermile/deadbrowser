@@ -3,10 +3,8 @@ namespace content\home;
 
 class view
 {
-
 	public static function config()
 	{
-		var_dump(22);
 		// Full browser_detection object
 		$my_browser = \lib\utility\browserDetection::browser_detection('full_assoc');
 		$myBrowserName    = $my_browser['browser_name'];
@@ -43,7 +41,7 @@ class view
 		else
 		{
 			\lib\data::old(false);
-			\lib\data::page_title(T_('NO! You are Alive!'))
+			\lib\data::page_title(T_('NO! You are Alive!'));
 			\lib\data::page_desc(T_("Your browser is up-to-date! Please enjoy using it!"));
 		}
 
