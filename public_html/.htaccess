@@ -1,6 +1,18 @@
 Options +FollowSymLinks
 Options -Indexes
 
+# ------------------------------ work on localhost or ip
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteBase /projects/deadbrowser/public_html/
+#RewriteRule ^index\.php$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /projects/deadbrowser/public_html/index.php [L]
+#</IfModule>
+
+
+
 # -----------------------------------------------------
 <IfModule mod_rewrite.c>
 	RewriteEngine On
