@@ -6,7 +6,7 @@ class view
 	public static function config()
 	{
 		// Full browser_detection object
-		$my_browser = \lib\utility\browserDetection::browser_detection('full_assoc');
+		$my_browser       = \dash\utility\browserDetection::browser_detection('full_assoc');
 		$myBrowserName    = $my_browser['browser_name'];
 		$myBrowserVersion = $my_browser['browser_number'];
 		$myBrowserOs      = $my_browser['os'];
@@ -34,16 +34,16 @@ class view
 				$myPageDesc .= ' @'. $my_browser['os'];
 			}
 
-			\lib\data::old(true);
-			\lib\data::page_title(T_("You are DEAD!"));
-			\lib\data::page_desc($myPageDesc);
+			\dash\data::old(true);
+			\dash\data::page_title(T_("You are DEAD!"));
+			\dash\data::page_desc($myPageDesc);
 		}
 		else
 		{
-			\lib\data::old(false);
-			\lib\data::page_title(T_('NO! You are Alive!'));
-			\lib\data::page_desc(T_("Your browser is up-to-date! Please enjoy using it!"));
-			\lib\data::page_special(true);
+			\dash\data::old(false);
+			\dash\data::page_title(T_('NO! You are Alive!'));
+			\dash\data::page_desc(T_("Your browser is up-to-date! Please enjoy using it!"));
+			\dash\data::page_special(true);
 		}
 
 		// By default for firefox "browser_name" is "gecko". We set it to "firefox"
@@ -131,13 +131,13 @@ class view
 			$myMsg2 = T_("IE is DIE!");
 		}
 
-		\lib\data::browser($my_browser);
-		\lib\data::name($myBrowserName);
-		\lib\data::version($myBrowserVersion);
-		\lib\data::os($myBrowserOs);
-		\lib\data::logo($myBrowserLogo);
-		\lib\data::message1($myMsg1);
-		\lib\data::message2($myMsg2);
+		\dash\data::browser($my_browser);
+		\dash\data::name($myBrowserName);
+		\dash\data::version($myBrowserVersion);
+		\dash\data::os($myBrowserOs);
+		\dash\data::logo($myBrowserLogo);
+		\dash\data::message1($myMsg1);
+		\dash\data::message2($myMsg2);
 
 
 		// var_dump($my_browser);
