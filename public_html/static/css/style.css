@@ -75,10 +75,10 @@ body {
   margin-bottom: 15px;
   display: none
 }
-h4, h6 {
+h4, h3 {
   color: #3A3A3A;
 }
-h6 {
+h3 {
   font-size: 2em;
 }
 .message1 {
