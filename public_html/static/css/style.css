@@ -15,6 +15,9 @@ body {
   color: #3A3A3A;
   font-weight: 700;
 }
+.header h1{
+  font-size: 1em;
+}
 
 #browser{
   text-align: center;
