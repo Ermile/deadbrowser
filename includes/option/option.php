@@ -9,7 +9,7 @@
 */
 
 
-// self::$url['protocol']       = 'https';
+self::$url['protocol']       = 'https';
 self::$url['root']           = 'deadbrowser';
 // self::$url['tld']            = 'com';
 
