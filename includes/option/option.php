@@ -8,7 +8,11 @@
 * The base configurations of the dashsample.
 */
 
-self::$url['tld']            = 'com';
+
+// self::$url['protocol']       = 'https';
+self::$url['root']           = 'deadbrowser';
+// self::$url['tld']            = 'com';
+
 self::$config['db_template'] = false;
 
 
